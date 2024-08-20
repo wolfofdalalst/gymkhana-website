@@ -16,3 +16,16 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Contributors
+
+Special thanks to the following contributors for their valuable contributions to this project:
+
+- [Abir Roy](https://github.com/roy-abir05)
+- [Ayush Gupta](https://github.com/wolfofdalalst)
+- [Dawipayan Das](https://github.com/dawipayandas)
+- [Sachin Kumar Yadav](https://github.com/sachinky09)
+- [Sagar Das](https://github.com/sagardas25)
+- [Swaraj Jaiswal](https://github.com/swarajjaiswal)
+
+We appreciate their time and effort in making this project better.
