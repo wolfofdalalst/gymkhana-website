@@ -34,34 +34,40 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-full h-14 fixed top-0 left-0 mb-5 bg-transparent ${
+      className={`w-screen h-fit fixed top-0 left-0 mb-5 md:px-[12%] bg-transparent ${
         isBlurred ? "backdrop-blur" : ""
       } ${isOpen ? 'backdrop-blur h-full' : ''}`}
     >
-      <div className="flex items-center justify-between px-5">
-        <Image src="/gymkhana_logo.webp" alt="Gymkhana Logo" width={54} height={54} />
+      <div className="w-full flex items-center justify-between gap-x-28 md:justify-center px-5">
+        <Image src="/gymkhana_logo.webp" alt="Gymkhana Logo" width={100} height={100} />
 
-        <ul className="w-3/5 flex items-center justify-evenly p-2 hidden md:flex space-x-4">
-          <li className="relative">
-            <Link href="/" className={`group ${currentRoute==='/'?'text-secondary':'text-primary'} hover:text-secondary`}>
+        <ul className="w-3/5 items-center justify-evenly p-2 hidden md:flex space-x-4 text-xl">
+          <li>
+            <Link href="/" className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}>
               Home
               <span class="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
             </Link>
           </li>
           <li>
-            <Link href="/post-bearer" className={`group ${currentRoute==='/post-bearer'?'text-secondary':'text-primary'} hover:text-secondary`}>
+            <Link href="/clubs" className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}>
+              Clubs
+              <span class="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/post-bearer" className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}>
               Post Bearer
               <span class="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
             </Link>
           </li>
           <li>
-            <Link href="https://www.google.com" className={`group text-primary hover:text-secondary`}>
+            <Link href="https://www.google.com" className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}>
               Grievance Form
               <span class="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
             </Link>
           </li>
           <li>
-            <Link href="/contact-us" className={`group ${currentRoute==='/contact-us'?'text-secondary':'text-primary'} hover:text-secondary`}>
+            <Link href="/contact-us" className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}>
               Contact Us
               <span class="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
             </Link>
@@ -71,8 +77,8 @@ function Navbar() {
         <Image
           src="/nit_dgp_logo.webp"
           alt="NIT DGP Logo"
-          width={40}
-          height={40}
+          width={64}
+          height={64}
           className="hidden md:block"
         />
 
@@ -90,8 +96,8 @@ function Navbar() {
         </div>
       </div>
       {isOpen && (
-        <div className="w-screen h-screen md:hidden flex flex-col space-y-2 m-auto mt-2 backdrop-blur">
-          <ul className="w-full h-4/5 flex flex-col items-center justify-evenly p-2">
+        <div className="w-screen h-screen md:hidden flex flex-col space-y-2 mt-2 backdrop-blur">
+          <ul className="w-full h-2/3 flex flex-col items-center justify-evenly p-2">
             <li>
               <Link href="/" className="text-primary">
                 Home
