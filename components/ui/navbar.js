@@ -34,7 +34,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-screen h-fit fixed top-0 left-0 mb-5 md:px-[12%] bg-transparent ${
+      className={`w-screen h-fit sticky top-0 left-0 mb-5 md:px-[12%] bg-transparent ${
         isBlurred ? "backdrop-blur" : ""
       } ${isOpen ? 'backdrop-blur h-full' : ''}`}
     >
@@ -88,33 +88,38 @@ function Navbar() {
             className="text-gray-700 focus:outline-none"
           >
             {isOpen ? (
-              <FontAwesomeIcon icon={faXmark} />
+              <FontAwesomeIcon icon={faXmark} size="2x"/>
             ) : (
-              <FontAwesomeIcon icon={faBars} />
+              <FontAwesomeIcon icon={faBars} size="2x"/>
             )}
           </button>
         </div>
       </div>
       {isOpen && (
         <div className="w-screen h-screen md:hidden flex flex-col space-y-2 mt-2 backdrop-blur">
-          <ul className="w-full h-2/3 flex flex-col items-center justify-evenly p-2">
+          <ul className="w-full h-2/3 flex flex-col gap-y-10 items-end justify-start p-2 text-3xl">
             <li>
-              <Link href="/" className="text-primary">
+              <Link href="/" className="text-primary" onClick={() => setIsOpen(!isOpen)}>
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/post-bearer" className="text-primary">
+              <Link href="/clubs" className="text-primary" onClick={() => setIsOpen(!isOpen)}>
+                Clubs
+              </Link>
+            </li>
+            <li>
+              <Link href="/post-bearer" className="text-primary" onClick={() => setIsOpen(!isOpen)}>
                 Post Bearer
               </Link>
             </li>
             <li>
-              <Link href="https://www.google.com" className="text-primary">
+              <Link href="https://www.google.com" className="text-primary" onClick={() => setIsOpen(!isOpen)}>
                 Grievance Form
               </Link>
             </li>
             <li>
-              <Link href="/contact-us" className="text-primary">
+              <Link href="/contact-us" className="text-primary" onClick={() => setIsOpen(!isOpen)}>
                 Contact Us
               </Link>
             </li>
@@ -122,9 +127,9 @@ function Navbar() {
 
           <div className="w-full">
             <ul className="w-1/2 flex items-center justify-evenly p-2">
-              <li><a href="https://www.x.com" target="_blank"><FontAwesomeIcon icon={faXTwitter} /></a></li>
-              <li><a href="https://www.facebook.com" target="_blank"><FontAwesomeIcon icon={faFacebookF} /></a></li>
-              <li><a href="https://www.instagram.com" target="_blank"><FontAwesomeIcon icon={faInstagram} /></a></li>
+              <li><a href="https://www.x.com" target="_blank"><FontAwesomeIcon icon={faXTwitter} size="2x"/></a></li>
+              <li><a href="https://www.facebook.com" target="_blank"><FontAwesomeIcon icon={faFacebookF} size="2x"/></a></li>
+              <li><a href="https://www.instagram.com" target="_blank"><FontAwesomeIcon icon={faInstagram} size="2x"/></a></li>
             </ul>
           </div>
         </div>
