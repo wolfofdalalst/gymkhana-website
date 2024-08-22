@@ -1,4 +1,4 @@
-import ExpandableCardDemo from "@/components/blocks/expandable-card-demo-grid";
+import ExpandableCard from "@/components/blocks/expandable-card-grid";
 import Image from "next/image";
 
 
