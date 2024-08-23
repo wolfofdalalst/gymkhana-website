@@ -9,6 +9,10 @@ const nextConfig = {
             {
                 protocol: "https",
                 hostname: "nitdgp.ac.in"
+            },
+            {
+                protocol: "https",
+                hostname: "images.unsplash.com"
             }
         ]
     }
