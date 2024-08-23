@@ -36,7 +36,7 @@ function Navbar() {
     <nav
       className={`w-screen h-fit sticky top-0 left-0 mb-5 md:px-[12%] bg-transparent ${
         isBlurred ? "backdrop-blur" : ""
-      } ${isOpen ? 'backdrop-blur h-full' : ''}`}
+      } ${isOpen ? 'backdrop-blur h-full' : ''} z-50`}
     >
       <div className="w-full flex items-center justify-between gap-x-28 md:justify-center px-5">
         <Image src="/gymkhana_logo.webp" alt="Gymkhana Logo" width={100} height={100} />
