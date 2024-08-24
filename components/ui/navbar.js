@@ -31,7 +31,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-[99vw] h-fit sticky top-0 mx-auto mb-5 md:px-[12%] bg-white bg-opacity-80  ${
+      className={`w-full h-fit sticky top-0 mx-auto mb-5 md:px-[12%] bg-white bg-opacity-80  ${
         isBlurred ? "backdrop-blur shadow-[0_2px_1px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)]" : ""
       } ${isOpen ? 'backdrop-blur h-full' : ''} z-50 md:z-50`}
     >
