@@ -12,31 +12,31 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-2xl w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
-      <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200 text-center mb-5">
+    <div className="max-w-2xl w-full mx-auto rounded-none md:rounded-2xl px-4 pb-4 pt-0 md:pb-8 shadow-input bg-white dark:bg-black">
+      <h2 className="font-bold text-3xl text-neutral-800 dark:text-neutral-200  mb-5 ">
         Contact Us
       </h2>
-      <p className="text-neutral-600 text-sm w-full mt-2 dark:text-neutral-300 text-center w-full ">
+      <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300  ">
         We would love to hear from you. Please fill out this form and we will get in touch with you shortly.
       </p>
       <form className="my-8" onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4  ">
           <LabelInputContainer>
-            <Label htmlFor="firstname">First Name</Label>
+            <Label htmlFor="firstname" >First Name</Label>
             <Input id="firstname" placeholder="John" type="text" />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="lastname">Last Name</Label>
+            <Label htmlFor="lastname" >Last Name</Label>
             <Input id="lastname" placeholder="Doe" type="text" />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
+          <Label htmlFor="email"  >Email Address</Label>
           <Input id="email" placeholder="johndoe@example.com" type="email" />
         </LabelInputContainer>
 
         <LabelInputContainer className="mb-8">
-          <Label htmlFor="message">Message</Label>
+          <Label htmlFor="message"  >Message</Label>
           <textarea
             id="message"
             placeholder="Your message here..."

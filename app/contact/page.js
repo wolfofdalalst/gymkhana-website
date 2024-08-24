@@ -1,4 +1,4 @@
-import SignupFormDemo from '@/components/example/signup-form-demo'
+import ContactForm from '@/components/contact/contact-us'
 import React from 'react'
 
 function page() {
@@ -6,7 +6,7 @@ function page() {
 
         <>
         
-            <SignupFormDemo/>
+            <ContactForm/>
 
         </>
 
