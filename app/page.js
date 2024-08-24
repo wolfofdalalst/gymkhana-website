@@ -74,7 +74,7 @@ export default function Home() {
 
             {/* <AppleCardsCarouselDemo /> */}
             <div className="w-7/10">
-            <Achievements data={data}/>
+            {/* <Achievements data={data}/> */}
             </div>
             
             <div className="w-full md:w-[70%] mx-auto mb-6">
