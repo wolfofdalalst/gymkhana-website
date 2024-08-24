@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 import { Card, Carousel } from './apple-cards-carousel';
 
-export default function Achievements({data}) {
+export default function Achievements({ data }) {
 
     const cards = data.map((card, index) => (
         <Card key={card.src} card={card} index={index} layout={true} />
-      ));
+    ));
 
     return (
         <div className="w-full h-full py-20">
@@ -14,6 +14,6 @@ export default function Achievements({data}) {
             </h2>
             <Carousel items={cards} />
         </div>
-    )
+    );
 }
 

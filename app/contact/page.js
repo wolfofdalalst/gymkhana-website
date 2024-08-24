@@ -1,18 +1,9 @@
-import ContactForm from '@/components/contact/contact-us'
-import React from 'react'
+import ContactForm from '@/components/contact/contact-us';
 
 function page() {
   return (
-
-        <>
-        
-            <ContactForm/>
-
-        </>
-
-
-
-  )
+    <ContactForm />
+  );
 }
 
-export default page
+export default page;

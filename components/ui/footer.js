@@ -8,17 +8,10 @@ export default function Footer() {
     <footer className=" bg-gray-100 p-8 self-end ">
       <div className="flex flex-wrap justify-between">
         <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 sm:mb-0">
-
-
-              <Image src="/nit_dgp_logo.webp" alt="DGP Logo" width={100} height={100} />
-         
-
-
-            <Image src="/gymkhana_logo.webp" alt="SG Logo" width={100} height={100} />
-
-
+          <Image src="/nit_dgp_logo.webp" alt="DGP Logo" width={100} height={100} />
+          <Image src="/gymkhana_logo.webp" alt="SG Logo" width={100} height={100} />
         </div>
-        
+
         <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 sm:mb-0">
           <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
           <ul>

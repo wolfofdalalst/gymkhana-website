@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from 'next/image';
-import TypingText from "@/components/ui/Typingtext";
 import About from "@/components/ui/About";
 import NoticeBoard from "@/components/ui/Noticeboard";
 import Section from "@/components/ui/Section";
@@ -46,7 +45,7 @@ export default function Home() {
 
         {/* Static Text */}
         <div className="text-center mb-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">Students' Gymkhana</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">Students&apos; Gymkhana</h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-2">National Institute of Technology</h2>
           <h2 className="text-xl md:text-2xl font-medium">Durgapur</h2>
         </div>
