@@ -67,7 +67,7 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/contact-us" className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}>
+            <Link href="/contact" className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}>
               Contact Us
               <span class="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
             </Link>
@@ -119,7 +119,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="/contact-us" className="text-primary" onClick={() => setIsOpen(!isOpen)}>
+              <Link href="/contact" className="text-primary" onClick={() => setIsOpen(!isOpen)}>
                 Contact Us
               </Link>
             </li>
