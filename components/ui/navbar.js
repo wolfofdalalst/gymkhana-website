@@ -1,15 +1,12 @@
-"use client";
+"use client"
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faXTwitter, faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { usePathname } from "next/navigation";
 
 function Navbar() {
-
-  const currentRoute = usePathname();
 
   const [isBlurred, setIsBlurred] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -34,9 +31,9 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-screen h-fit sticky top-0 left-0 mb-5 md:px-[12%] bg-transparent ${
-        isBlurred ? "backdrop-blur" : ""
-      } ${isOpen ? 'backdrop-blur h-full' : ''} z-50`}
+      className={`w-[99vw] h-fit sticky top-0 left-0 mb-5 md:px-[12%] bg-white bg-opacity-80  ${
+        isBlurred ? "backdrop-blur shadow-[0_0px_1px_1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)]" : ""
+      } ${isOpen ? 'backdrop-blur h-full' : ''} z-50 md:z-50`}
     >
       <div className="w-full flex items-center justify-between gap-x-28 md:justify-center px-5">
         <Image src="/gymkhana_logo.webp" alt="Gymkhana Logo" width={100} height={100} />
@@ -97,7 +94,7 @@ function Navbar() {
       </div>
       {isOpen && (
         <div className="w-screen h-screen md:hidden flex flex-col space-y-2 mt-2 backdrop-blur">
-          <ul className="w-full h-2/3 flex flex-col gap-y-10 items-end justify-start p-2 text-3xl">
+          <ul className="w-full h-1/2 flex flex-col gap-y-10 items-end justify-start p-7 text-3xl">
             <li>
               <Link href="/" className="text-primary" onClick={() => setIsOpen(!isOpen)}>
                 Home
