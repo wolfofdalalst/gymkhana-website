@@ -61,9 +61,9 @@ export default function Home() {
         {/* Sections Rendered Based on Scroll */}
         {isScrolled && (
           <>
-            <div className="flex flex-col md:flex-row w-full md:w-[70%] mx-auto mb-6">
+            <div className="flex flex-col md:flex-row w-full md:w-[70%] mx-auto my-6">
               {/* Notice Board */}
-              <div className="w-full md:w-1/3 pr-0 md:pr-4 mb-4 md:mb-0">
+              <div className="w-full md:w-1/3 pr-0 md:pr-4 mb-4 md:mb-0 order-1">
                 <NoticeBoard />
               </div>
 
