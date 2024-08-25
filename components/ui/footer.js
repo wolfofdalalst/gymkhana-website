@@ -11,7 +11,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className=" bg-gray-100 p-8 pr-0 self-end ">
+    <footer className=" bg-gray-100 p-8  self-end ">
       <div className="flex flex-wrap justify-around lg:pl-36 ">
         <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 sm:mb-0">
           <Image src="/nit_dgp_logo.webp"  alt="DGP Logo" width={100} height={100} />
@@ -49,20 +49,20 @@ export default function Footer() {
 
           <div className="flex space-x-4 mt-8 ">
 
-            <Link href="https://www.facebook.com/gymkhana.nitdgp?mibextid=ZbWKwL&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-black-800">
+            <Link href="https://www.facebook.com/gymkhana.nitdgp" target="_blank" rel="noopener noreferrer" className="text-black-800">
 
                <FaFacebookSquare  className="w-8 h-8" />
 
 
             </Link>
 
-            <Link href="https://www.instagram.com/gymkhana_nitdgp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-black-800">
+            <Link href="https://www.instagram.com/gymkhana_nitdgp" target="_blank" rel="noopener noreferrer" className="text-black-800">
               
                 <FaInstagram className="w-8 h-8" />
 
             </Link>
 
-            <Link href="/" target="_blank" rel="noopener noreferrer" className="text-black-100 ">
+            <Link href="https://github.com/wolfofdalalst/gymkhana-website" target="_blank" rel="noopener noreferrer" className="text-black-100 ">
 
                <FaGithub  className="w-8 h-8" />
 
@@ -72,10 +72,14 @@ export default function Footer() {
         </div> {/* wrap all div */}
         </div>  {/* contact div */}
      
-          <div className="mt-8 text-center mx-auto text-gray-500">
-            <p>&copy; 2024 Students Gymkhana, NIT Durgapur</p>
+
+        </div>
+
+          <div className=" w-full mt-8 text-center text-gray-500">
+            <p>&copy; 2024 Students&apos; Gymkhana, NIT Durgapur</p>
           </div>
-      </div>
+
+
     </footer>
   );
 }
