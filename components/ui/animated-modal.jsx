@@ -42,7 +42,8 @@ export const ModalTrigger = ({
         "px-4 py-2 rounded-md text-black dark:text-white text-center relative overflow-hidden",
         className
       )}
-      onClick={() => setOpen(true)}>
+      // onClick={() => setOpen(true)}
+      >
       {children}
     </button>)
   );
@@ -167,7 +168,9 @@ const Overlay = ({
 const CloseIcon = () => {
   const { setOpen } = useModal();
   return (
-    (<button onClick={() => setOpen(false)} className="absolute top-4 right-4 group">
+    (<button
+      // onClick={() => setOpen(false)}
+    className="absolute top-4 right-4 group">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"

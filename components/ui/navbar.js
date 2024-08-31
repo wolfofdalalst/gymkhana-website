@@ -9,8 +9,13 @@ import {
   faFacebookF,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { ContactUsModal } from "../contactUsModal/contactUsModal";
+import { useRouter } from "next/navigation";
 
 function Navbar() {
+
+  const router = useRouter()
+
   const [isBlurred, setIsBlurred] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -69,7 +74,7 @@ function Navbar() {
               className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}
             >
               Home
-              <span class="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
+              <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
             </Link>
           </li>
           <li>
@@ -78,7 +83,7 @@ function Navbar() {
               className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}
             >
               Clubs
-              <span class="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
+              <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
             </Link>
           </li>
           <li>
@@ -87,26 +92,13 @@ function Navbar() {
               className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}
             >
               Post Bearer
-              <span class="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
+              <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
             </Link>
           </li>
           <li>
-            <Link
-              href="https://www.google.com"
-              className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}
-            >
-              Grievance Form
-              <span class="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/contact"
-              className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}
-            >
-              Contact Us
-              <span class="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
-            </Link>
+            <div className="h-fit" onClick={() => router.push('contact')}>
+              <ContactUsModal />
+            </div>
           </li>
         </ul>
 
