@@ -35,6 +35,7 @@ export default function Home() {
         {/* Logo */}
         <div className="mb-6 flex justify-center mt-6">
           <Image
+            priority
             src="/gymkhana_logo.webp"
             alt="Student's Gymkhana Logo"
             width={150} 
