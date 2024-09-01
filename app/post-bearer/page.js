@@ -1,7 +1,7 @@
 import { FocusCards } from "@/components/ui/focus-cards";
 
 export default function PostBearer() {
-    const cards = [
+  const cards = [
     {
       title: "PRESIDENT",
       src: "/PostBearers/Presi.jpeg",
@@ -27,5 +27,5 @@ export default function PostBearer() {
       src: "/PostBearers/GR.jpeg",
     },
   ];
-    return <FocusCards cards={cards}/>
+  return <FocusCards cards={cards} />;
 }

@@ -14,8 +14,7 @@ import { ContactUsModal } from "../contactUsModal/contactUsModal";
 import { useRouter } from "next/navigation";
 
 function Navbar() {
-
-  const router = useRouter()
+  const router = useRouter();
 
   const [isBlurred, setIsBlurred] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -97,7 +96,7 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <div className="h-fit" onClick={() => router.push('contact')}>
+            <div className="h-fit" onClick={() => router.push("contact")}>
               <ContactUsModal />
             </div>
           </li>
@@ -125,7 +124,7 @@ function Navbar() {
           </button>
         </div>
       </div>
-      
+
       {/* Hamburger Menu */}
       <div
         className={`w-screen h-screen md:hidden flex flex-col space-y-2 mt-2 transition-max-height overflow-hidden ease-in-out duration-700 ${
@@ -163,17 +162,26 @@ function Navbar() {
         <div className="w-full">
           <ul className="w-1/2 flex items-center justify-evenly p-2">
             <li>
-              <a href="https://github.com/wolfofdalalst/gymkhana-website" target="_blank">
-                <FaGithub  className="w-8 h-8" />
+              <a
+                href="https://github.com/wolfofdalalst/gymkhana-website"
+                target="_blank"
+              >
+                <FaGithub className="w-8 h-8" />
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/gymkhana.nitdgp" target="_blank">
+              <a
+                href="https://www.facebook.com/gymkhana.nitdgp"
+                target="_blank"
+              >
                 <FontAwesomeIcon icon={faFacebookF} size="2x" />
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/gymkhana_nitdgp" target="_blank">
+              <a
+                href="https://www.instagram.com/gymkhana_nitdgp"
+                target="_blank"
+              >
                 <FontAwesomeIcon icon={faInstagram} size="2x" />
               </a>
             </li>
