@@ -32,13 +32,13 @@ export default function Home() {
     <div>
       {/* Initial Section (Full Viewport Height) */}
       <div className="min-h-screen flex flex-col items-center justify-center p-4 relative">
-        <div className="flex flex-col md:flex-row items-center justify-between w-full md:w-[70%] mx-auto">
+        <div className="flex flex-col gap-5 md:flex-row items-center justify-between w-full md:w-[70%] mx-auto">
           
           {/* Left Section: Typing Text and Logo */}
           <div className="flex flex-col justify-center md:w-1/2">
 
             {/* Logo */}
-            <div className="mb-6 flex justify-center">
+            {/* <div className="mb-6 flex justify-center">
               <Image
                 priority
                 src="/gymkhana_logo.webp"
@@ -47,13 +47,12 @@ export default function Home() {
                 height={150} 
                 className="object-contain"
               />
-            </div>
+            </div> */}
 
             {/* Static Text */}
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-2">Students&apos; Gymkhana</h1>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-2">National Institute of Technology</h2>
-              <h2 className="text-xl md:text-2xl font-medium">Durgapur</h2>
+              <h1 className="text-4xl md:text-5xl font-bold m-2">Students&apos; Gymkhana</h1>
+              <h2 className="text-2xl md:text-xl font-semibold m-2">National Institute of Technology<br />Durgapur</h2>
             </div>
 
             {/* Typing Text */}
