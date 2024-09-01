@@ -1,13 +1,39 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { cn } from "@/lib/utils";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactForm() {
-  const handleSubmit = (e) => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Contact form submitted");
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      toast.success("Message sent successfully");
+      setFormData({ firstName: "", lastName: "", email: "", message: "" });
+    } else {
+      toast.error("Failed to submit contact form");
+    }
   };
 
   return (
@@ -16,30 +42,56 @@ export default function ContactForm() {
         Contact Us
       </h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300  ">
-        We would love to hear from you. Please fill out this form and we will get in touch with you shortly.
+        We would love to hear from you. Please fill out this form and we will
+        get in touch with you shortly.
       </p>
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4  ">
           <LabelInputContainer>
-            <Label htmlFor="firstname" >First Name</Label>
-            <Input id="firstname" placeholder="John" type="text" />
+            <Label htmlFor="firstName">First Name</Label>
+            <Input
+              id="firstName"
+              placeholder="John"
+              name="firstName"
+              type="text"
+              onChange={handleChange}
+              value={formData.firstName}
+              required
+            />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="lastname" >Last Name</Label>
-            <Input id="lastname" placeholder="Doe" type="text" />
+            <Label htmlFor="lastName">Last Name</Label>
+            <Input
+              id="lastName"
+              name="lastName"
+              placeholder="Doe"
+              type="text"
+              onChange={handleChange}
+              value={formData.lastName}
+              required
+            />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email"  >Email Address</Label>
-          <Input id="email" placeholder="johndoe@example.com" type="email" />
+          <Label htmlFor="email">Email Address</Label>
+          <Input
+            id="email"
+            placeholder="johndoe@example.com"
+            type="email"
+            onChange={handleChange}
+            value={formData.email}
+          />
         </LabelInputContainer>
 
         <LabelInputContainer className="mb-8">
-          <Label htmlFor="message"  >Message</Label>
+          <Label htmlFor="message">Message</Label>
           <textarea
             id="message"
             placeholder="Your message here..."
             className="w-full h-32 p-2 border rounded-md dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
+            onChange={handleChange}
+            value={formData.message}
+            required
           />
         </LabelInputContainer>
 
@@ -51,6 +103,7 @@ export default function ContactForm() {
           <BottomGradient />
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 }
