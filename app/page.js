@@ -31,33 +31,55 @@ export default function Home() {
   return (
     <div>
       {/* Initial Section (Full Viewport Height) */}
-      <div className="min-h-screen flex flex-col items-center justify-center p-4">
-        {/* Logo */}
-        <div className="mb-6 flex justify-center mt-6">
-          <Image
-            priority
-            src="/gymkhana_logo.webp"
-            alt="Student's Gymkhana Logo"
-            width={150} 
-            height={150} 
-            className="object-contain"
-          />
+      <div className="min-h-screen flex flex-col items-center justify-center p-4 relative">
+        <div className="flex flex-col md:flex-row items-center justify-between w-full md:w-[70%] mx-auto">
+          
+          {/* Left Section: Typing Text and Logo */}
+          <div className="flex flex-col justify-center md:w-1/2">
+
+            {/* Logo */}
+            <div className="mb-6 flex justify-center">
+              <Image
+                priority
+                src="/gymkhana_logo.webp"
+                alt="Student's Gymkhana Logo"
+                width={150} 
+                height={150} 
+                className="object-contain"
+              />
+            </div>
+
+            {/* Static Text */}
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-2">Students&apos; Gymkhana</h1>
+              <h2 className="text-2xl md:text-3xl font-semibold mb-2">National Institute of Technology</h2>
+              <h2 className="text-xl md:text-2xl font-medium">Durgapur</h2>
+            </div>
+
+            {/* Typing Text */}
+            <div className="text-center mt-6">
+              <TypewriterEffect words={words} />
+            </div>
+
+          </div>
+
+          {/* Right Section: NIT Durgapur Image */}
+          <div className="flex flex-col items-center md:w-1/2">
+
+            {/* NIT Durgapur Image */}
+            <div className="flex justify-center mt-6">
+              <Image
+                priority
+                src="https://nitdgp.ac.in/iicpage/static/media/NitFrontGate.ac06eab6.webp"
+                alt="NIT Durgapur" 
+                width={500}
+                height={400}
+                className="object-contain"
+              />
+            </div>
+          </div>
         </div>
 
-        {/* Static Text */}
-        <div className="text-center mb-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">Students&apos; Gymkhana</h1>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-2">National Institute of Technology</h2>
-          <h2 className="text-xl md:text-2xl font-medium">Durgapur</h2>
-        </div>
-
-        {/* Typing Text */}
-        {/* <div className="text-center mt-10">
-          <TypingText />
-        </div> */}
-        <div className="text-center mt-10">
-        <TypewriterEffect words={words} />
-        </div>
         {/* Sections Rendered Based on Scroll */}
         {isScrolled && (
           <>
@@ -73,9 +95,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* <AppleCardsCarouselDemo /> */}
             <div className="w-7/10">
-            {/* <Achievements data={data}/> */}
+              {/* Achievements section */}
             </div>
             
             <div className="w-full md:w-[70%] mx-auto mb-6">
@@ -90,7 +111,7 @@ export default function Home() {
 
             <div className="w-full md:w-[70%] mx-auto mb-6">
               <Section
-                imageSrc="/recstacy.jpeg" // Replace with actual path
+                imageSrc="/recstacy.jpeg" 
                 heading="Recstacy"
                 description="Recstacy is NIT Durgapur's annual sports festival, bringing together students from across the country for competitions in cricket, football, basketball, and more. It's one of the largest inter-college sports fests in Eastern India, known for promoting sportsmanship and camaraderie."
                 buttonText="Find More"
@@ -114,7 +135,6 @@ export default function Home() {
     </div>
   );
 }
-
 
 // Achievements Data
 const data = [
