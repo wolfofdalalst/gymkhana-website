@@ -151,15 +151,7 @@ function Navbar() {
               Post Bearer
             </Link>
           </li>
-          <li>
-            <Link
-              href="https://www.google.com"
-              className="text-primary"
-              onClick={toggleMenu}
-            >
-              Grievance Form
-            </Link>
-          </li>
+
           <li>
             <Link href="/contact" className="text-primary" onClick={toggleMenu}>
               Contact Us

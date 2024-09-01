@@ -11,7 +11,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className=" bg-gray-100 p-8  self-end ">
+    <footer className=" mt-4 bg-gray-100 p-8  self-end ">
       <div className="flex flex-wrap justify-around lg:pl-36 ">
         <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 sm:mb-0">
           <Image src="/nit_dgp_logo.webp"  alt="DGP Logo" width={100} height={100} />
