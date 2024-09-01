@@ -89,7 +89,7 @@ export default function Home() {
           <Section
             imageSrc="/recstacy.jpeg"
             heading="Recstacy"
-            description="Recstacy is NIT Durgapur's annual sports festival, bringing together students from across the country for competitions in cricket, football, basketball, and more. It's one of the largest inter-college sports fests in Eastern India, known for promoting sportsmanship and camaraderie."
+            description="Recstacy is the annual cultural fest of NIT Durgapur, celebrated with a diverse array of events like dance, music, drama, literary competitions, and workshops. It’s a vibrant gathering that showcases student talent and creativity, featuring both formal competitions and informal fun activities. The fest often ends with star-studded performances, making it a highlight of the year for students."
             buttonText="Find More"
             buttonLink="recstacy"
             reverse
@@ -100,7 +100,7 @@ export default function Home() {
           <Section
             imageSrc="/recrave.jpg"
             heading="reCrave"
-            description="Students' Gymkhana of NIT DGP brings the first edition of - reCrave: annual food fest of NIT Durgapur."
+            description="Students' Gymkhana of NIT DGP brings the latest edition of - reCrave: annual food fest of NIT Durgapur."
             buttonText="Find More"
             buttonLink="recrave"
           />
