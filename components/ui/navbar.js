@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { FaGithub } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -162,17 +163,17 @@ function Navbar() {
         <div className="w-full">
           <ul className="w-1/2 flex items-center justify-evenly p-2">
             <li>
-              <a href="https://www.x.com" target="_blank">
-                <FontAwesomeIcon icon={faXTwitter} size="2x" />
+              <a href="https://github.com/wolfofdalalst/gymkhana-website" target="_blank">
+                <FaGithub  className="w-8 h-8" />
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com" target="_blank">
+              <a href="https://www.facebook.com/gymkhana.nitdgp" target="_blank">
                 <FontAwesomeIcon icon={faFacebookF} size="2x" />
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com" target="_blank">
+              <a href="https://www.instagram.com/gymkhana_nitdgp" target="_blank">
                 <FontAwesomeIcon icon={faInstagram} size="2x" />
               </a>
             </li>
