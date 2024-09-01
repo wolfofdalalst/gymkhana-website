@@ -1,33 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import Image from 'next/image';
 import About from "@/components/ui/About";
 import NoticeBoard from "@/components/ui/Noticeboard";
 import Section from "@/components/ui/Section";
-import Achievements from "@/components/ui/achievements";
 import DummyContent from "@/components/ui/DummyContent";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  // Handle scroll events
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setIsScrolled(true);
-    }
-  };
-
-  useEffect(() => {
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <div>
       {/* Initial Section (Full Viewport Height) */}
@@ -80,8 +59,6 @@ export default function Home() {
         </div>
 
         {/* Sections Rendered Based on Scroll */}
-        {isScrolled && (
-          <>
             <div className="flex flex-col md:flex-row w-full md:w-[70%] mx-auto my-6">
               {/* Notice Board */}
               <div className="w-full md:w-1/3 pr-0 md:pr-4 mb-4 md:mb-0 order-1">
@@ -128,8 +105,6 @@ export default function Home() {
                 buttonLink="recrave" 
               />
             </div>
-          </>
-        )}
       </div>
     </div>
   );
