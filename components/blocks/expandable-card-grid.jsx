@@ -224,7 +224,7 @@ const cards = [
     content: () => {
       return (
         (<p>
-          We are the Hindi society of NIT Durgapur, actively engaged in the service of 'Hindi', official language of the Indian Republic. Darpan looks forward to the overall development of people with different types of programs. We provide valuable and useful platforms for the promotion of talent of students, as well as awards, cash prizes and citations to honor their merit. Various offline and online events are organised throughout the year. Promoting rajbhasa 'Hindi' is the first priority of Darpan and will continue to establish Hindi language on its peak growth with its proper functions. 
+          We are the Hindi society of NIT Durgapur, actively engaged in the service of &apos;Hindi&apos;, official language of the Indian Republic. Darpan looks forward to the overall development of people with different types of programs. We provide valuable and useful platforms for the promotion of talent of students, as well as awards, cash prizes and citations to honor their merit. Various offline and online events are organised throughout the year. Promoting rajbhasa &apos;Hindi&apos; is the first priority of Darpan and will continue to establish Hindi language on its peak growth with its proper functions. 
         </p>)
       );
     },
@@ -427,7 +427,7 @@ const cards = [
     content: () => {
       return (
         (<p>
-          QuizInc is the official Knowledge club of the college, which dabbles in quizzing as well as the sharing of worldly information amongst all the students. From hidden facts of India to obscure sports trivia, from the intricacies of going viral to the joys of mainstream entertainment, from the controversies in the newspapers to the advancements in business and technology, QuizInc covers all dimensions of this unique world and filters it down for the common masses. They preach and practise the slogan 'Cogita, Ergo Sum', (I think, therefore, I am), and strive to change the broad consciousness of this reputed college. 
+          QuizInc is the official Knowledge club of the college, which dabbles in quizzing as well as the sharing of worldly information amongst all the students. From hidden facts of India to obscure sports trivia, from the intricacies of going viral to the joys of mainstream entertainment, from the controversies in the newspapers to the advancements in business and technology, QuizInc covers all dimensions of this unique world and filters it down for the common masses. They preach and practise the slogan &apos;Cogita, Ergo Sum&apos;, (I think, therefore, I am), and strive to change the broad consciousness of this reputed college. 
         </p>)
       );
     },
@@ -463,8 +463,8 @@ const cards = [
 
           
 
-          "Coding is a Choice, not a Compulsion.
-          When you are doing it, just do it with a smile."
+          &quot;Coding is a Choice, not a Compulsion.
+          When you are doing it, just do it with a smile.&quot;
         </p>)
       );
     },
