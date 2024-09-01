@@ -65,7 +65,7 @@ function Navbar() {
           alt="Gymkhana Logo"
           width={100}
           height={100}
-          className="h-8 w-8 md:h-[100px] md:w-[100px]"
+          className="h-16 w-16 md:h-[100px] md:w-[100px]"
         />
 
         <ul className="w-3/5 items-center justify-evenly p-2 hidden md:flex space-x-4 text-xl">
@@ -118,9 +118,9 @@ function Navbar() {
             className="text-gray-700 focus:outline-none"
           >
             {isOpen ? (
-              <FontAwesomeIcon icon={faXmark} size="2x" className="h-5 w-5" />
+              <FontAwesomeIcon icon={faXmark} className="h-10 w-8" />
             ) : (
-              <FontAwesomeIcon icon={faBars} size="2x" className="h-5 w-5" />
+              <FontAwesomeIcon icon={faBars} className="h-10 w-8" />
             )}
           </button>
         </div>
@@ -132,7 +132,7 @@ function Navbar() {
           isOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
-        <ul className="w-full h-2/3 flex flex-col gap-y-10 items-end justify-start p-7 text-3xl">
+        <ul className="w-full h-2/3 flex flex-col gap-y-10 items-end justify-start p-7 text-3xl font-semibold">
           <li>
             <Link href="/" className="text-primary" onClick={toggleMenu}>
               Home
