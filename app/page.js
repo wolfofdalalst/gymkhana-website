@@ -5,57 +5,50 @@ import NoticeBoard from "@/components/ui/Noticeboard";
 import Section from "@/components/ui/Section";
 import DummyContent from "@/components/ui/DummyContent";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Set initial window width
+      setWindowWidth(window.innerWidth);
+
+      // Handle resize event
+      const handleResize = () => setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+
+      // Clean up event listener on component unmount
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
   return (
     <div>
       {/* Initial Section (Full Viewport Height) */}
       <div className="min-h-screen flex flex-col items-center justify-center p-4 relative">
-        <div className="flex flex-col gap-5 md:flex-row items-center justify-between w-full md:w-[70%] mx-auto">
-          {/* Left Section: Typing Text and Logo */}
-          <div className="flex flex-col justify-center md:w-1/2">
-            {/* Logo */}
-            {/* <div className="mb-6 flex justify-center">
-              <Image
-                priority
-                src="/gymkhana_logo.webp"
-                alt="Student's Gymkhana Logo"
-                width={150} 
-                height={150} 
-                className="object-contain"
-              />
-            </div> */}
-
-            {/* Static Text */}
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold m-2">
-                Students&apos; Gymkhana
-              </h1>
-              <h2 className="text-2xl md:text-xl font-semibold m-2">
-                National Institute of Technology
-                <br />
-                Durgapur
-              </h2>
-            </div>
-
-            {/* Typing Text */}
-            <div className="text-center mt-6">
-              <TypewriterEffect words={words} />
-            </div>
+        <div className="w-screen h-[800px] mb-10">
+          <div className="w-screen h-[800px] inset-0 absolute">
+            <Image
+              priority={true}
+              layout="fill"
+              src="/nit_durgapur_cover.jpeg"
+            />
           </div>
-
-          {/* Right Section: NIT Durgapur Image */}
-          <div className="flex flex-col items-center md:w-1/2">
-            {/* NIT Durgapur Image */}
-            <div className="flex justify-center mt-6">
-              <Image
-                priority
-                src="https://nitdgp.ac.in/iicpage/static/media/NitFrontGate.ac06eab6.webp"
-                alt="NIT Durgapur"
-                width={500}
-                height={400}
-                className="object-contain"
-              />
+          <div className="w-screen h-[800px] inset-0 bg-[rgba(0,0,0,0.55)] absolute flex items-center justify-center">
+            <div className="w-1/2 h-1/2 text-tertiary flex items-center justify-evenly flex-col text-center">
+              <div className="w-full h-1/2 flex items-center justify-evenly flex-col">
+                <h1 className="font-bold text-5xl">Students' Gymkhana</h1>
+                <h2 className="font-bold text-5xl">Welcomes You!</h2>
+              </div>
+              <p className="font-semibold text-2xl text-gray-200">
+                The Students' Gymkhana of NIT Durgapur is the official body
+                representing the student community. We work to promote the
+                overall well-being, academic excellence, and holistic
+                development of students, fostering a vibrant and inclusive
+                campus environment.
+              </p>
             </div>
           </div>
         </div>

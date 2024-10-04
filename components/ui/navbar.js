@@ -12,6 +12,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { ContactUsModal } from "../contactUsModal/contactUsModal";
 import { useRouter } from "next/navigation";
+import NavBarLinks from "../NavBarLinks/NavBarLinks";
 
 function Navbar() {
   const router = useRouter();
@@ -22,7 +23,7 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       // Check if the window has scrolled down more than 50px
-      if (window.scrollY > 50) {
+      if (window.scrollY > 80) {
         setIsBlurred(true);
       } else {
         setIsBlurred(false);
@@ -48,26 +49,26 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-full md:h-fit sticky top-0 mx-auto mb-5 md:px-[12%] bg-white bg-opacity-80  ${
+      className={`w-screen max-h-24 md:h-fit sticky top-0 py-3 bg-black bg-opacity-100  ${
         isBlurred
-          ? "md:backdrop-blur shadow-[0_2px_1px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)]"
+          ? "bg-transparent"
           : ""
       } ${
         isOpen
           ? "backdrop-blur h-screen bg-white bg-opacity-80"
-          : "backdrop-blur h-fit"
-      } z-50 transition-shadow  duration-500 ease-in-out overflow-hidden`}
+          : "h-fit"
+      } z-50 transition-all duration-500 ease-in-out overflow-hidden`}
     >
-      <div className="w-full flex items-center justify-between gap-x-28 md:justify-center px-5">
+      <div className={`w-screen flex items-center bg-transparent justify-between gap-x-28 md:justify-evenly px-5`}>
         <Image
           src="/gymkhana_logo.webp"
           alt="Gymkhana Logo"
-          width={100}
-          height={100}
-          className="h-16 w-16 md:h-[100px] md:w-[100px]"
+          width={40}
+          height={40}
+          className={`${isBlurred?'hidden':''}`}
         />
 
-        <ul className="w-3/5 items-center justify-evenly p-2 hidden md:flex space-x-4 text-xl">
+        {/* <ul className="w-3/5 items-center justify-evenly p-2 hidden md:flex space-x-4 text-xl">
           <li>
             <Link
               href="/"
@@ -100,14 +101,16 @@ function Navbar() {
               <ContactUsModal />
             </div>
           </li>
-        </ul>
+        </ul> */}
+
+        <NavBarLinks isBlurred={isBlurred}/>
 
         <Image
-          src="/nit_dgp_logo.webp"
+          src="/NIT_Durgapur_logo.webp"
           alt="NIT DGP Logo"
-          width={64}
-          height={64}
-          className="hidden md:block"
+          width={40}
+          height={40}
+          className={`${isBlurred?'hidden':''}`}
         />
 
         {/* Hamburger Menu Button */}
