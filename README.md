@@ -1,5 +1,6 @@
 # Official Gymkhana Website, NIT Durgapur
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Before contributing, make sure to use ESLint and Prettier to ensure consistent code formatting and catch any potential errors. 
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Before contributing, make sure to use ESLint and Prettier to ensure consistent code formatting and catch any potential errors.
 
 ## Getting Started
 
@@ -16,6 +17,17 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Contributing Guide
+
+To contribute to this project, please follow these steps:
+
+1. Pull the latest changes from the remote repository to your local machine.
+2. Make your changes and ensure that the code builds successfully by running `npm run build`.
+3. Commit your changes to your branch.
+4. Pull any remote changes and then push your branch to the remote repository's `develop` branch.
+
+Please note that direct commits to the `master` branch are not allowed.
 
 ## Contributors
 
