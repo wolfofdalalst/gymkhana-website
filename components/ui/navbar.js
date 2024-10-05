@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -17,17 +17,36 @@ import NavBarLinks from "../NavBarLinks/NavBarLinks";
 function Navbar() {
   const router = useRouter();
 
-  const [isBlurred, setIsBlurred] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrollingUp, setisScrollingUp] = useState(false);
+  const lastScrollY = useRef(0);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if the window has scrolled down more than 50px
-      if (window.scrollY > 80) {
-        setIsBlurred(true);
+      
+      const currentScrollY = window.scrollY;
+
+      if(Math.abs(currentScrollY-lastScrollY.current)<=80) return;
+
+      if (currentScrollY > 80) {
+
+        setIsScrolled(true);
+
+        if(lastScrollY.current>currentScrollY){
+          setisScrollingUp(true);
+        }
+        else if(lastScrollY.current<currentScrollY){
+          setisScrollingUp(false);
+        }
+
       } else {
-        setIsBlurred(false);
+        setIsScrolled(false);
+        setisScrollingUp(true);
       }
+
+      // console.log(window.scrollY)
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -49,23 +68,23 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-screen max-h-24 md:h-fit sticky top-0 py-3 bg-black bg-opacity-100  ${
-        isBlurred
-          ? "bg-transparent"
+      className={`w-screen md:h-fit sticky top-0 py-5 md:py-3 bg-black bg-opacity-100  ${
+        isScrolled
+          ? "bg-opacity-50 md:bg-transparent"
           : ""
       } ${
         isOpen
-          ? "backdrop-blur h-screen bg-white bg-opacity-80"
+          ? "backdrop-blur h-[60vh]"
           : "h-fit"
-      } z-50 transition-all duration-500 ease-in-out overflow-hidden`}
+      } z-50 transition-all duration-300 ease-in-out overflow-hidden`}
     >
-      <div className={`w-screen flex items-center bg-transparent justify-between gap-x-28 md:justify-evenly px-5`}>
+      <div className={`w-screen h-6 md:h-fit flex items-center bg-transparent justify-between gap-x-28 md:justify-evenly px-5`}>
         <Image
           src="/gymkhana_logo.webp"
           alt="Gymkhana Logo"
           width={40}
           height={40}
-          className={`${isBlurred?'hidden':''}`}
+          className={`${isScrolled?'md:hidden':''}`}
         />
 
         {/* <ul className="w-3/5 items-center justify-evenly p-2 hidden md:flex space-x-4 text-xl">
@@ -103,14 +122,16 @@ function Navbar() {
           </li>
         </ul> */}
 
-        <NavBarLinks isBlurred={isBlurred}/>
+        <div className="hidden md:flex">
+        <NavBarLinks isScrolled={isScrolled} isScrollingUp={isScrollingUp}/>
+        </div>
 
         <Image
           src="/NIT_Durgapur_logo.webp"
           alt="NIT DGP Logo"
           width={40}
           height={40}
-          className={`${isBlurred?'hidden':''}`}
+          className={`hidden md:flex ${isScrolled?'md:hidden':''}`}
         />
 
         {/* Hamburger Menu Button */}
@@ -120,9 +141,9 @@ function Navbar() {
             className="text-gray-700 focus:outline-none"
           >
             {isOpen ? (
-              <FontAwesomeIcon icon={faXmark} className="h-10 w-8" />
+              <FontAwesomeIcon icon={faXmark} className="h-10 w-8 text-gray-200" />
             ) : (
-              <FontAwesomeIcon icon={faBars} className="h-10 w-8" />
+              <FontAwesomeIcon icon={faBars} className="h-10 w-8 text-gray-200" />
             )}
           </button>
         </div>
@@ -130,25 +151,25 @@ function Navbar() {
 
       {/* Hamburger Menu */}
       <div
-        className={`w-screen h-screen md:hidden flex flex-col space-y-2 mt-2 transition-max-height overflow-hidden ease-in-out duration-700 ${
-          isOpen ? "max-h-screen" : "max-h-0"
+        className={`w-screen h-[60vh] md:hidden flex flex-col space-y-2 mt-2 transition-max-height overflow-hidden ease-in-out duration-700 ${
+          isOpen ? "" : "h-0"
         }`}
       >
         <ul className="w-full h-2/3 flex flex-col gap-y-10 items-end justify-start p-7 text-3xl font-semibold">
           <li>
-            <Link href="/" className="text-primary" onClick={toggleMenu}>
+            <Link href="/" className="text-gray-300" onClick={toggleMenu}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/clubs" className="text-primary" onClick={toggleMenu}>
+            <Link href="/clubs" className="text-gray-300" onClick={toggleMenu}>
               Clubs
             </Link>
           </li>
           <li>
             <Link
               href="/post-bearer"
-              className="text-primary"
+              className="text-gray-300"
               onClick={toggleMenu}
             >
               Post Bearer
@@ -156,7 +177,7 @@ function Navbar() {
           </li>
 
           <li>
-            <Link href="/contact" className="text-primary" onClick={toggleMenu}>
+            <Link href="/contact" className="text-gray-300" onClick={toggleMenu}>
               Contact Us
             </Link>
           </li>
@@ -169,7 +190,7 @@ function Navbar() {
                 href="https://github.com/wolfofdalalst/gymkhana-website"
                 target="_blank"
               >
-                <FaGithub className="w-8 h-8" />
+                <FaGithub className="w-8 h-8 text-gray-100" />
               </a>
             </li>
             <li>
@@ -177,7 +198,7 @@ function Navbar() {
                 href="https://www.facebook.com/gymkhana.nitdgp"
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faFacebookF} size="2x" />
+                <FontAwesomeIcon icon={faFacebookF} size="2x" className="text-gray-100" />
               </a>
             </li>
             <li>
@@ -185,7 +206,7 @@ function Navbar() {
                 href="https://www.instagram.com/gymkhana_nitdgp"
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faInstagram} size="2x" />
+                <FontAwesomeIcon icon={faInstagram} size="2x" className="text-gray-100"/>
               </a>
             </li>
           </ul>

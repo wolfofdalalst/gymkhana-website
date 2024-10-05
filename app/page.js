@@ -37,12 +37,12 @@ export default function Home() {
             />
           </div>
           <div className="w-screen h-[800px] inset-0 bg-[rgba(0,0,0,0.55)] absolute flex items-center justify-center">
-            <div className="w-1/2 h-1/2 text-tertiary flex items-center justify-evenly flex-col text-center">
+            <div className="w-4/5 md:w-1/2 h-1/2 text-tertiary flex items-center justify-evenly flex-col text-center">
               <div className="w-full h-1/2 flex items-center justify-evenly flex-col">
-                <h1 className="font-bold text-5xl">Students' Gymkhana</h1>
-                <h2 className="font-bold text-5xl">Welcomes You!</h2>
+                <h1 className="font-bold md:text-5xl">Students' Gymkhana</h1>
+                <h2 className="font-bold md:text-5xl">Welcomes You!</h2>
               </div>
-              <p className="font-semibold text-2xl text-gray-200">
+              <p className="w-full font-semibold md:text-2xl text-gray-200">
                 The Students' Gymkhana of NIT Durgapur is the official body
                 representing the student community. We work to promote the
                 overall well-being, academic excellence, and holistic
