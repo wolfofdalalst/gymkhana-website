@@ -16,6 +16,8 @@ pnpm dev
 bun dev
 ```
 
+Rename `.env.example` to `.env.local`, and fill in the required environment variables.
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Contributing Guide
