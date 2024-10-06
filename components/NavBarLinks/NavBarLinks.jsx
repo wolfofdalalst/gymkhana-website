@@ -13,7 +13,7 @@ const NavBarLinks = (props) => {
           <Link
           href="#"
           className="group text-white text-lg font-medium whitespace-nowrap hover:text-neutral-300">
-            About Us
+            About
             <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-neutral-400"></span>
           </Link>
           <Link href="#"

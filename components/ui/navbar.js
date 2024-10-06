@@ -151,8 +151,8 @@ function Navbar() {
 
       {/* Hamburger Menu */}
       <div
-        className={`w-screen h-[60vh] md:hidden flex flex-col space-y-2 mt-2 transition-max-height overflow-hidden ease-in-out duration-700 ${
-          isOpen ? "" : "h-0"
+        className={`w-screen md:hidden flex flex-col space-y-2 mt-2 transition-max-height overflow-hidden ease-in-out duration-700 ${
+          isOpen ? "h-[60vh]" : "h-0"
         }`}
       >
         <ul className="w-full h-2/3 flex flex-col gap-y-10 items-end justify-start p-7 text-3xl font-semibold">
