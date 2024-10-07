@@ -6,6 +6,9 @@ import Section from "@/components/ui/Section";
 import DummyContent from "@/components/ui/DummyContent";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { useState, useEffect } from "react";
+import ReactPlayer from 'react-player';
+import Recs from '@/components/ui/Recs';
+import ReCrave from "@/components/ui/Recrave";
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -79,7 +82,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="w-full md:w-[70%] mx-auto mb-6">
+        {/* <div className="w-full md:w-[70%] mx-auto mb-6">
           <Section
             imageSrc="/recstacy.jpeg"
             heading="Recstacy"
@@ -88,9 +91,11 @@ export default function Home() {
             buttonLink="recstacy"
             reverse
           />
-        </div>
+        </div> */}
+        <Recs/>
+        
 
-        <div className="w-full md:w-[70%] mx-auto mb-6">
+        {/* <div className="w-full md:w-[70%] mx-auto mb-6">
           <Section
             imageSrc="/recrave.jpg"
             heading="reCrave"
@@ -98,67 +103,9 @@ export default function Home() {
             buttonText="Find More"
             buttonLink="recrave"
           />
-        </div>
+        </div> */}\
+        <ReCrave/>
       </div>
     </div>
   );
 }
-
-// Achievements Data
-const data = [
-  {
-    category: "Artificial Intelligence",
-    title: "You can do more with AI.",
-    src: "/gymkhana_logo.webp",
-    content: <DummyContent />,
-  },
-  {
-    category: "Productivity",
-    title: "Enhance your productivity.",
-    src: "/gymkhana_logo.webp",
-    content: <DummyContent />,
-  },
-  {
-    category: "Product",
-    title: "Launching the new Apple Vision Pro.",
-    src: "/gymkhana_logo.webp",
-    content: <DummyContent />,
-  },
-
-  {
-    category: "Product",
-    title: "Maps for your iPhone 15 Pro Max.",
-    src: "/gymkhana_logo.webp",
-    content: <DummyContent />,
-  },
-  {
-    category: "iOS",
-    title: "Photography just got better.",
-    src: "/gymkhana_logo.webp",
-    content: <DummyContent />,
-  },
-  {
-    category: "Hiring",
-    title: "Hiring for a Staff Software Engineer",
-    src: "/gymkhana_logo.webp",
-    content: <DummyContent />,
-  },
-];
-
-//TypeWriter words
-const words = [
-  {
-    text: "Welcome",
-  },
-  {
-    text: "to",
-  },
-  {
-    text: "Students'",
-    className: "text-blue-500 dark:text-blue-500",
-  },
-  {
-    text: " Gymkhana. ",
-    className: "text-blue-500 dark:text-blue-500",
-  },
-];
