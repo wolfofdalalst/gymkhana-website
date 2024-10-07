@@ -58,8 +58,8 @@ export default function PostBearer() {
 
       <div className="w-screen h-fit flex items-center justify-center">
         <div className="w-full h-fit mx-auto flex flex-col items-center justify-center md:grid md:grid-cols-3 md:grid-rows-2 md:gap-x-[15%] md:gap-y-[5%] md:px-10">
-          {cards.map((card, key) => (
-            <div className="w-[90%] md:w-full h-[700px]">
+          {cards.map((card, index) => (
+            <div className="w-[90%] md:w-full h-[700px]" key={index}>
               <PostBearerCard
                 src={card.src}
                 post={card.post}

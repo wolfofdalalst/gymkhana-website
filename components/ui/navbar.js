@@ -24,22 +24,18 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      
       const currentScrollY = window.scrollY;
 
-      if(Math.abs(currentScrollY-lastScrollY.current)<=80) return;
+      if (Math.abs(currentScrollY - lastScrollY.current) <= 80) return;
 
       if (currentScrollY > 80) {
-
         setIsScrolled(true);
 
-        if(lastScrollY.current>currentScrollY){
+        if (lastScrollY.current > currentScrollY) {
           setisScrollingUp(true);
-        }
-        else if(lastScrollY.current<currentScrollY){
+        } else if (lastScrollY.current < currentScrollY) {
           setisScrollingUp(false);
         }
-
       } else {
         setIsScrolled(false);
         setisScrollingUp(true);
@@ -69,22 +65,20 @@ function Navbar() {
   return (
     <nav
       className={`w-screen md:h-fit sticky top-0 py-5 md:py-3 bg-black bg-opacity-100  ${
-        isScrolled
-          ? "bg-opacity-50 md:bg-transparent"
-          : ""
+        isScrolled ? "bg-opacity-50 md:bg-transparent" : ""
       } ${
-        isOpen
-          ? "backdrop-blur h-[60vh]"
-          : "h-fit"
+        isOpen ? "backdrop-blur h-[60vh]" : "h-fit"
       } z-50 transition-all duration-300 ease-in-out overflow-hidden`}
     >
-      <div className={`w-screen h-6 md:h-fit flex items-center bg-transparent justify-between gap-x-28 md:justify-evenly px-5`}>
+      <div
+        className={`w-screen h-6 md:h-fit flex items-center bg-transparent justify-between lg:gap-x-24 md:justify-evenly px-5`}
+      >
         <Image
           src="/gymkhana_logo.webp"
           alt="Gymkhana Logo"
           width={40}
           height={40}
-          className={`${isScrolled?'md:hidden':''}`}
+          className={`${isScrolled ? "md:hidden" : ""}`}
         />
 
         {/* <ul className="w-3/5 items-center justify-evenly p-2 hidden md:flex space-x-4 text-xl">
@@ -122,8 +116,8 @@ function Navbar() {
           </li>
         </ul> */}
 
-        <div className="hidden md:flex">
-        <NavBarLinks isScrolled={isScrolled} isScrollingUp={isScrollingUp}/>
+        <div className="w-[80%] lg:w-fit hidden md:flex">
+          <NavBarLinks isScrolled={isScrolled} isScrollingUp={isScrollingUp} />
         </div>
 
         <Image
@@ -131,7 +125,7 @@ function Navbar() {
           alt="NIT DGP Logo"
           width={40}
           height={40}
-          className={`hidden md:flex ${isScrolled?'md:hidden':''}`}
+          className={`hidden md:flex ${isScrolled ? "md:hidden" : ""}`}
         />
 
         {/* Hamburger Menu Button */}
@@ -141,9 +135,15 @@ function Navbar() {
             className="text-gray-700 focus:outline-none"
           >
             {isOpen ? (
-              <FontAwesomeIcon icon={faXmark} className="h-10 w-8 text-gray-200" />
+              <FontAwesomeIcon
+                icon={faXmark}
+                className="h-10 w-8 text-gray-200"
+              />
             ) : (
-              <FontAwesomeIcon icon={faBars} className="h-10 w-8 text-gray-200" />
+              <FontAwesomeIcon
+                icon={faBars}
+                className="h-10 w-8 text-gray-200"
+              />
             )}
           </button>
         </div>
@@ -177,7 +177,11 @@ function Navbar() {
           </li>
 
           <li>
-            <Link href="/contact" className="text-gray-300" onClick={toggleMenu}>
+            <Link
+              href="/contact"
+              className="text-gray-300"
+              onClick={toggleMenu}
+            >
               Contact Us
             </Link>
           </li>
@@ -198,7 +202,11 @@ function Navbar() {
                 href="https://www.facebook.com/gymkhana.nitdgp"
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faFacebookF} size="2x" className="text-gray-100" />
+                <FontAwesomeIcon
+                  icon={faFacebookF}
+                  size="2x"
+                  className="text-gray-100"
+                />
               </a>
             </li>
             <li>
@@ -206,7 +214,11 @@ function Navbar() {
                 href="https://www.instagram.com/gymkhana_nitdgp"
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faInstagram} size="2x" className="text-gray-100"/>
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  size="2x"
+                  className="text-gray-100"
+                />
               </a>
             </li>
           </ul>
