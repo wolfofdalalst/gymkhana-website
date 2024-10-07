@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 
 const Recs = () => {
   return (
-    <div className="relative w-screen h-[800px] mb-10">
+    <div className="relative w-screen h-[800px] mb-20">
   {/* Video Background */}
   {/* To play internal video */}
   <video
