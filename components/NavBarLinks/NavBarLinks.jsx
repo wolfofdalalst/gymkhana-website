@@ -8,33 +8,33 @@ const NavBarLinks = (props) => {
         href="/"
         className="group text-white  md:text-sm xl:text-lg font-medium whitespace-nowrap hover:text-neutral-300">
         Home
-        <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-neutral-400"></span>
+        <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-primary"></span>
       </Link>
       <Link
         href="/#about"
         className="group text-white  md:text-sm xl:text-lg font-medium whitespace-nowrap hover:text-neutral-300">
         About
-        <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-neutral-400"></span>
+        <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-primary"></span>
       </Link>
       <Link href="/#clubs"
         className="group text-white  md:text-sm xl:text-lg font-medium whitespace-nowrap hover:text-neutral-300">
         Clubs
-        <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-neutral-400"></span>
+        <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-primary"></span>
       </Link>
       <Link href="/#events"
         className="group text-white  md:text-sm xl:text-lg font-medium whitespace-nowrap hover:text-neutral-300">
         Events
-        <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-neutral-400"></span>
+        <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-primary"></span>
       </Link>
       <Link href="/post-bearer"
         className="group text-white  md:text-sm xl:text-lg font-medium whitespace-nowrap hover:text-neutral-300">
         Post Bearers
-        <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-neutral-400"></span>
+        <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-primary"></span>
       </Link>
       <Link href="/gallery"
         className="group text-white  md:text-sm xl:text-lg font-medium whitespace-nowrap hover:text-neutral-300">
         Gallery
-        <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-neutral-400"></span>
+        <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-primary"></span>
       </Link>
       <Link href='https://www.google.com/forms/about/' className=' md:text-sm xl:text-lg whitespace-nowrap' target='_blank'>
         Grievance Form
