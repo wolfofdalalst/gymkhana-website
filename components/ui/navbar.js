@@ -71,7 +71,7 @@ function Navbar() {
       } z-50 transition-all duration-300 ease-in-out overflow-hidden`}
     >
       <div
-        className={`w-screen h-6 md:h-fit flex items-center bg-transparent justify-between lg:gap-x-24 md:justify-evenly px-5`}
+        className={`w-full h-6 md:h-fit flex items-center bg-transparent justify-between lg:gap-x-24 md:justify-evenly px-5`}
       >
         <Image
           src="/gymkhana_logo.webp"

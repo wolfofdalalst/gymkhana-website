@@ -2,18 +2,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope,FaLinkedin } from 'react-icons/fa';
 import { FaLocationDot } from "react-icons/fa6";
 
-const Footer = () => {
+export default function Footer()  {
   return (
-    <footer className="bg-gray-800 text-white pt-10 pb-2">
-      <div className="container mx-auto pl-1 pr-0 ">
-        <div className="flex flex-col md:flex-row justify-between items-start ">
+    <footer className=" bg-darkCard text-white pt-10 pb-2  ">
+      <div className="container mx-auto pl-0 pr-0 flex-col justify-center items-center ">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start ">
           {/* Left Section: Logo and Text */}
-          <div className="flex-column items-center mb-8 md:mb-0 md:w-1/4">
+          <div className="flex-col items-center mb-8 sm:mb-0 md:w-1/4  ">
   
-            <div className="flex mb-3 justify-center">
+            <div className=" hidden sm:flex mb-3 justify-center">
               <Image src="/Gymkhana Logo Final White (1).png" alt="Logo" width={100} height={100} />
             </div>
  
@@ -25,29 +25,34 @@ const Footer = () => {
           </div>
 
 
-          <div class="h-44 mt-4 border-l-2 border-dashed border-gray-400  mx-5"></div>
+          <div className="h-56 hidden md:block border-l border-dashed border-gray-400 mx-5"> </div>
+
+          <div class="border-t w-5/6 border-dashed border-gray-400 my-4 block md:hidden "></div>
+
+
+          
 
           {/* Right Section: Links and Contact */}
-          <div className="md:w-3/4 flex flex-col md:flex-row justify-between ">
+          <div className=" w-full md:w-3/4  flex flex-col md:flex-row  items-center md:items-start md:justify-between ">
      
-            <div className="flex justify-center md:w-2/3 md:flex-row md:space-x-12 mb-8 md:mb-0   ">
+            <div className="flex  justify-around md:justify-center w-full md:w-2/3 md:flex-row md:space-x-12 mb-2 md:mb-0   ">
 
               {/* Quick Links */}
               <div className=" m-1 md:mb-0 md:w-1/3 p-4  ">
-                <h4 className="font-bold text-2xl text-center md:text-left">Quick Links</h4>
-                <div className="grid grid-cols-1 gap-1 mt-4">
-                  <a className="hover:text-yellow-400" target="_blank" href="#">
+                <h4 className="font-bold text-md md:text-2xl text-center md:text-left">Quick Links</h4>
+                <div className="grid grid-cols-1 gap-1 mt-4 text-sm md:text-lg ">
+                  <Link className="hover:text-primary" target="_blank" href="#">
                     Clubs
-                  </a>
-                  <a className="hover:text-yellow-400" target="_blank" href="#">
+                  </Link>
+                  <Link className="hover:text-primary" target="_blank" href="#">
                     Events
-                  </a>
-                  <a className="hover:text-yellow-400" target="_blank" href="#">
+                  </Link>
+                  <Link className="hover:text-primary" target="_blank" href="#">
                     Photo Gallery
-                  </a>
-                  <a className="hover:text-yellow-400" target="_blank" href="#">
+                  </Link>
+                  <Link className="hover:text-primary" target="_blank" href="#">
                     Post Bearers
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -57,33 +62,36 @@ const Footer = () => {
 
               {/* Important Links */}
               <div className="md:w-1/3  m-1 p-4  ">
-                <h4 className="font-bold text-2xl text-center md:text-left">Important Links</h4>
-                <div className="grid grid-cols-1 gap-1 mt-4">
-                  <a href="#" className="hover:text-yellow-400">
+                <h4 className="font-bold text-md md:text-2xl text-center md:text-left">Important Links</h4>
+                <div className="grid grid-cols-1 gap-1 mt-4 text-sm md:text-lg ">
+                  <Link href="#" className="hover:text-primary">
                     NIT DGP Website
-                  </a>
-                  <a href="#" className="hover:text-yellow-400">
+                  </Link>
+                  <Link href="#" className="hover:text-primary">
                     Contributors
-                  </a>
-                  <a href="#" className="hover:text-yellow-400">
+                  </Link>
+                  <Link href="#" className="hover:text-primary">
                     Placement Portal
-                  </a>
-                  <a href="#" className="hover:text-yellow-400">
+                  </Link>
+                  <Link href="#" className="hover:text-primary">
                     Grievance Form
-                  </a>
+                  </Link>
                 </div>
               </div>
 
           </div>
 
+
+          <div class="border-t w-5/6 border-dashed border-gray-400 my-4 block md:hidden "></div>
+
             {/* Contact Us */}
-            <div className="md:w-1/3 md:ml-10 p-4 ">
+            <div className="md:w-1/3 md:ml-10 p-4 mt-1">
               <h4 className="font-bold text-2xl text-center  md:text-left">Contact Us</h4>
               <div className="flex items-center mt-5 text-base mb-2">
                 <FaEnvelope className="mr-2 h-4 w-4" />
-                <a href="mailto:support@figma.com" className="hover:text-yellow-400">
+                <Link href="mailto:support@figma.com" className="hover:text-primary">
                   support@figma.com
-                </a>
+                </Link>
               </div>
 
               <div className="flex items-center mt-5 text-base mb-2">
@@ -95,15 +103,17 @@ const Footer = () => {
               </div>
 
               <div className="flex space-x-4 mt-4  ml-7 justify-center md:justify-start">
-                <a href="#" className="hover:text-yellow-400">
+
+                <Link href="#" className="hover:text-primary">
                   <FaFacebook className=" h-6 w-6" />
-                </a>
-                <a href="#" className="hover:text-yellow-400">
-                  <FaTwitter className=" h-6 w-6"/>
-                </a>
-                <a href="#" className="hover:text-yellow-400">
+                </Link>
+                <Link href="#" className="hover:text-primary">
+                  <FaLinkedin className=" h-6 w-6"/>
+                </Link>
+                <Link href="#" className="hover:text-primary">
                   <FaInstagram  className=" h-6 w-6"/>
-                </a>
+                </Link>
+
               </div>
             </div>
 
@@ -111,7 +121,8 @@ const Footer = () => {
         </div>
 
         
-        <hr className="border-dashed border-gray-600 mt-1 my-4" />
+        {/* <hr className="border-dashed w-5/6 bg-red-600 border-gray-600 mt-1 my-4" /> */}
+        <div class="border-t w-5/6 2xl:w-full border-dashed border-gray-400 mx-auto my-4 "></div>
 
        
         <div className="text-center text-sm">
@@ -120,6 +131,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}
 
-export default Footer;
+// export default Footer;
