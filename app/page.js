@@ -64,7 +64,7 @@ export default function Home() {
         {/* Sections Rendered Based on Scroll */}
         <div className="flex items-center justify-center w-full md:w-[70%] mx-auto mt-6 mb-24">
           {/* About Section */}
-          <div className="w-full md:w-4/5">
+          <div className="w-full">
             <section id="about">
               <div className="h-[7vh]"></div>
               <About />
@@ -73,7 +73,7 @@ export default function Home() {
         </div>
 
         <section id="clubs">
-        <div className="h-[7vh]"></div>
+          <div className="h-[7vh]"></div>
           <div className="w-full md:w-[70%] mx-auto mb-6">
             <Section
               imageSrc="/clubs.png"
@@ -86,7 +86,7 @@ export default function Home() {
         </section>
 
         <section id="events">
-        <div className="h-[7vh]"></div>
+          <div className="h-[7vh]"></div>
           <div className="flex flex-col items-center justify-center">
             <h1 className="font-extrabold text-5xl text-white text-center mb-7">
               Events
