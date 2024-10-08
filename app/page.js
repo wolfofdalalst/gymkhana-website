@@ -6,7 +6,7 @@ import Section from "@/components/ui/Section";
 import DummyContent from "@/components/ui/DummyContent";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { useState, useEffect } from "react";
-import ReactPlayer from 'react-player';
+// import ReactPlayer from 'react-player';
 import Recs from '@/components/ui/Recs';
 import ReCrave from "@/components/ui/Recrave";
 
@@ -59,10 +59,6 @@ export default function Home() {
 
         {/* Sections Rendered Based on Scroll */}
         <div className="flex items-center justify-center w-full md:w-[70%] mx-auto mt-6 mb-24">
-          {/* Notice Board */}
-          {/* <div className="w-full md:w-1/3 pr-0 md:pr-4 mb-4 md:mb-0 order-1">
-            <NoticeBoard />
-          </div> */}
 
           {/* About Section */}
           <div className="w-full md:w-4/5">
@@ -103,7 +99,7 @@ export default function Home() {
             buttonText="Find More"
             buttonLink="recrave"
           />
-        </div> */}\
+        </div> */}
         <ReCrave/>
       </div>
     </div>
