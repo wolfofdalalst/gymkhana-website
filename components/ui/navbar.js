@@ -67,7 +67,7 @@ function Navbar() {
       className={`w-screen md:h-fit sticky top-0 py-5 md:py-3 bg-black bg-opacity-100  ${
         isScrolled ? "bg-opacity-50 md:bg-transparent" : ""
       } ${
-        isOpen ? "backdrop-blur h-[60vh]" : "h-fit"
+        isOpen ? "backdrop-blur h-[100vh]" : "h-fit"
       } z-50 transition-all duration-300 ease-in-out overflow-hidden`}
     >
       <div
@@ -81,42 +81,7 @@ function Navbar() {
           className={`${isScrolled ? "md:hidden" : ""}`}
         />
 
-        {/* <ul className="w-3/5 items-center justify-evenly p-2 hidden md:flex space-x-4 text-xl">
-          <li>
-            <Link
-              href="/"
-              className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}
-            >
-              Home
-              <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/clubs"
-              className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}
-            >
-              Clubs
-              <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/post-bearer"
-              className={`group text-primary hover:text-secondary whitespace-nowrap inline-block lg:inline max-w-min`}
-            >
-              Post Bearer
-              <span className="block w-0 group-hover:w-full transition-all duration-500 h-0.5 bg-secondary"></span>
-            </Link>
-          </li>
-          <li>
-            <div className="h-fit" onClick={() => router.push("contact")}>
-              <ContactUsModal />
-            </div>
-          </li>
-        </ul> */}
-
-        <div className="w-[80%] lg:w-fit hidden md:flex">
+        <div className="w-fit hidden md:flex">
           <NavBarLinks isScrolled={isScrolled} isScrollingUp={isScrollingUp} />
         </div>
 
@@ -152,18 +117,28 @@ function Navbar() {
       {/* Hamburger Menu */}
       <div
         className={`w-screen md:hidden flex flex-col space-y-2 mt-2 transition-max-height overflow-hidden ease-in-out duration-700 ${
-          isOpen ? "h-[60vh]" : "h-0"
+          isOpen ? "h-[100vh]" : "h-0"
         }`}
       >
-        <ul className="w-full h-2/3 flex flex-col gap-y-10 items-end justify-start p-7 text-3xl font-semibold">
+        <ul className="w-full h-3/4 flex flex-col gap-y-10 items-end justify-start p-7 text-3xl font-semibold">
           <li>
             <Link href="/" className="text-gray-300" onClick={toggleMenu}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/clubs" className="text-gray-300" onClick={toggleMenu}>
+            <Link href="/#about" className="text-gray-300" onClick={toggleMenu}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href="/#clubs" className="text-gray-300" onClick={toggleMenu}>
               Clubs
+            </Link>
+          </li>
+          <li>
+            <Link href="/#events" className="text-gray-300" onClick={toggleMenu}>
+              Events
             </Link>
           </li>
           <li>
@@ -175,14 +150,23 @@ function Navbar() {
               Post Bearer
             </Link>
           </li>
-
           <li>
             <Link
               href="/contact"
               className="text-gray-300"
               onClick={toggleMenu}
             >
-              Contact Us
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/https://www.google.com/forms/about/"
+              className="text-primary"
+              target="_blank"
+              onClick={toggleMenu}
+            >
+              Grievance Form
             </Link>
           </li>
         </ul>

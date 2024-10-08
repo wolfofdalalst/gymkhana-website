@@ -67,3 +67,7 @@
     @apply bg-black text-primary;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

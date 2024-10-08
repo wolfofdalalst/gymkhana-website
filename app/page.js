@@ -7,7 +7,7 @@ import DummyContent from "@/components/ui/DummyContent";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { useState, useEffect } from "react";
 // import ReactPlayer from 'react-player';
-import Recs from '@/components/ui/Recs';
+import Recs from "@/components/ui/Recs";
 import ReCrave from "@/components/ui/Recrave";
 
 export default function Home() {
@@ -43,8 +43,12 @@ export default function Home() {
           <div className="w-screen h-[800px] inset-0 bg-[rgba(0,0,0,0.55)] absolute flex items-center justify-center">
             <div className="w-4/5 md:w-1/2 h-1/2 flex items-center justify-evenly flex-col text-center">
               <div className="w-full h-1/2 flex items-center justify-evenly flex-col">
-                <h1 className="font-bold md:text-5xl text-primary">Students&apos; Gymkhana</h1>
-                <h2 className="font-bold md:text-5xl text-white">Welcomes You!</h2>
+                <h1 className="font-bold md:text-5xl text-primary">
+                  Students&apos; Gymkhana
+                </h1>
+                <h2 className="font-bold md:text-5xl text-white">
+                  Welcomes You!
+                </h2>
               </div>
               <p className="w-full font-semibold md:text-2xl text-gray-200">
                 The Students&apos; Gymkhana of NIT Durgapur is the official body
@@ -59,48 +63,38 @@ export default function Home() {
 
         {/* Sections Rendered Based on Scroll */}
         <div className="flex items-center justify-center w-full md:w-[70%] mx-auto mt-6 mb-24">
-
           {/* About Section */}
           <div className="w-full md:w-4/5">
-            <About />
+            <section id="about">
+              <div className="h-[7vh]"></div>
+              <About />
+            </section>
           </div>
         </div>
 
-        <div className="w-7/10">{/* Achievements section */}</div>
+        <section id="clubs">
+        <div className="h-[7vh]"></div>
+          <div className="w-full md:w-[70%] mx-auto mb-6">
+            <Section
+              imageSrc="/clubs.png"
+              heading="Clubs"
+              description="Clubs at NIT Durgapur are student-led organizations that cater to various interests, such as technology, arts, culture, sports, and social service. They provide platforms for students to explore their passions, develop skills, and connect with peers. Each club organizes events, workshops, and activities throughout the year, enriching campus life and offering opportunities for personal and professional growth. Explore the various clubs and organizations that offer diverse activities and interests."
+              buttonText="Find More"
+              buttonLink="clubs"
+            />
+          </div>
+        </section>
 
-        <div className="w-full md:w-[70%] mx-auto mb-6">
-          <Section
-            imageSrc="/clubs.png"
-            heading="Clubs"
-            description="Clubs at NIT Durgapur are student-led organizations that cater to various interests, such as technology, arts, culture, sports, and social service. They provide platforms for students to explore their passions, develop skills, and connect with peers. Each club organizes events, workshops, and activities throughout the year, enriching campus life and offering opportunities for personal and professional growth. Explore the various clubs and organizations that offer diverse activities and interests."
-            buttonText="Find More"
-            buttonLink="clubs"
-          />
-        </div>
-
-        {/* <div className="w-full md:w-[70%] mx-auto mb-6">
-          <Section
-            imageSrc="/recstacy.jpeg"
-            heading="Recstacy"
-            description="Recstacy is the annual cultural fest of NIT Durgapur, celebrated with a diverse array of events like dance, music, drama, literary competitions, and workshops. It’s a vibrant gathering that showcases student talent and creativity, featuring both formal competitions and informal fun activities. The fest often ends with star-studded performances, making it a highlight of the year for students."
-            buttonText="Find More"
-            buttonLink="recstacy"
-            reverse
-          />
-        </div> */}
-        <Recs/>
-        
-
-        {/* <div className="w-full md:w-[70%] mx-auto mb-6">
-          <Section
-            imageSrc="/recrave.jpg"
-            heading="reCrave"
-            description="Students' Gymkhana of NIT DGP brings the latest edition of - reCrave: annual food fest of NIT Durgapur."
-            buttonText="Find More"
-            buttonLink="recrave"
-          />
-        </div> */}
-        <ReCrave/>
+        <section id="events">
+        <div className="h-[7vh]"></div>
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="font-extrabold text-5xl text-white text-center mb-7">
+              Events
+            </h1>
+            <Recs />
+            <ReCrave />
+          </div>
+        </section>
       </div>
     </div>
   );
