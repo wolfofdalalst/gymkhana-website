@@ -11,7 +11,7 @@ export default function Footer()  {
       <div className="container mx-auto pl-0 pr-0 flex-col justify-center items-center ">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start ">
           {/* Left Section: Logo and Text */}
-          <div className="flex-col items-center mb-8 sm:mb-0 md:w-1/4  ">
+          <div className="flex-col items-center mb-2 sm:mb-0 md:w-1/4  ">
   
             <div className=" hidden sm:flex mb-3 justify-center">
               <Image src="/Gymkhana Logo Final White (1).png" alt="Logo" width={100} height={100} />
@@ -22,12 +22,28 @@ export default function Footer()  {
               <p>National Institute of Technology, Durgapur</p>
               <p>West Bengal - 735209</p>
             </div>
+
+
+
+            <div className="flex mt-2 w-2/6  justify-around mx-auto">
+
+              <Link href="#" className="hover:text-primary">
+                <FaFacebook className=" h-5 w-5" />
+              </Link>
+              <Link href="#" className="hover:text-primary">
+                <FaLinkedin className=" h-5 w-5"/>
+              </Link>
+              <Link href="#" className="hover:text-primary">
+                <FaInstagram  className="h-5 w-5"/>
+              </Link>
+
+              </div>
           </div>
 
 
           <div className="h-56 hidden md:block border-l border-dashed border-gray-400 mx-5"> </div>
 
-          <div class="border-t w-5/6 border-dashed border-gray-400 my-4 block md:hidden "></div>
+          <div className="border-t w-5/6 border-dashed border-gray-400 my-4 block md:hidden "></div>
 
 
           
@@ -82,50 +98,38 @@ export default function Footer()  {
           </div>
 
 
-          <div class="border-t w-5/6 border-dashed border-gray-400 my-4 block md:hidden "></div>
+          <div className="border-t w-5/6 border-dashed border-gray-400 my-4 block md:hidden "></div>
 
             {/* Contact Us */}
-            <div className="md:w-1/3 md:ml-10 p-4 mt-1">
-              <h4 className="font-bold text-2xl text-center  md:text-left">Contact Us</h4>
-              <div className="flex items-center mt-5 text-base mb-2">
+            <div className="md:w-1/3 md:ml-10 p-4 mt-1  flex-col justify-center items-center  ">
+              <h4 className="font-bold text-lg md:text-2xl text-center md:text-left">Contact Us</h4>
+
+              <div className="flex items-center  w-5/6 md:w-full mt-5 text-sm md:text-base mb-2 mx-auto ">
                 <FaEnvelope className="mr-2 h-4 w-4" />
                 <Link href="mailto:support@figma.com" className="hover:text-primary">
                   support@figma.com
                 </Link>
               </div>
 
-              <div className="flex items-center mt-5 text-base mb-2">
+              <div className="flex items-center  w-5/6 md:w-full mt-5 text-sm md:text-base mb-2 mx-auto ">
               <FaLocationDot className="mr-2 h-5 w-5" />
-                <div>
-                <p className="text-base">National Institute of Technology, Durgapur</p>
-                <p className="text-base">West Bengal - 735209</p>
+                <div className="text-sm md:text-base">
+                <p>National Institute of Technology, Durgapur</p>
+                <p>West Bengal - 735209</p>
                 </div>
               </div>
 
-              <div className="flex space-x-4 mt-4  ml-7 justify-center md:justify-start">
-
-                <Link href="#" className="hover:text-primary">
-                  <FaFacebook className=" h-6 w-6" />
-                </Link>
-                <Link href="#" className="hover:text-primary">
-                  <FaLinkedin className=" h-6 w-6"/>
-                </Link>
-                <Link href="#" className="hover:text-primary">
-                  <FaInstagram  className=" h-6 w-6"/>
-                </Link>
-
-              </div>
             </div>
 
           </div>
         </div>
 
         
-        {/* <hr className="border-dashed w-5/6 bg-red-600 border-gray-600 mt-1 my-4" /> */}
-        <div class="border-t w-5/6 2xl:w-full border-dashed border-gray-400 mx-auto my-4 "></div>
+        
+        <div className="border-t w-5/6 2xl:w-full border-dashed border-gray-400 mx-auto my-4 "></div>
 
        
-        <div className="text-center text-sm">
+        <div className="text-center mb-1 text-sm">
           <p>&copy; 2024 Students&apos; Gymkhana, NIT Durgapur</p>
         </div>
       </div>
