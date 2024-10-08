@@ -27,13 +27,13 @@ export default function Footer()  {
 
             <div className="flex mt-2 w-2/6  justify-around mx-auto">
 
-              <Link href="#" className="hover:text-primary">
+              <Link href="https://www.facebook.com/gymkhana.nitdgp" target="_blank" className="hover:text-primary">
                 <FaFacebook className=" h-5 w-5" />
               </Link>
-              <Link href="#" className="hover:text-primary">
+              <Link href="https://www.linkedin.com/company/students-gymkhana-nit-durgapur/" target="_blank" className="hover:text-primary">
                 <FaLinkedin className=" h-5 w-5"/>
               </Link>
-              <Link href="#" className="hover:text-primary">
+              <Link href="https://www.instagram.com/gymkhana_nitdgp" target="_blank" className="hover:text-primary">
                 <FaInstagram  className="h-5 w-5"/>
               </Link>
 
@@ -57,16 +57,16 @@ export default function Footer()  {
               <div className=" m-1 md:mb-0 md:w-1/3 p-4  ">
                 <h4 className="font-bold text-md md:text-2xl text-center md:text-left">Quick Links</h4>
                 <div className="grid grid-cols-1 gap-1 mt-4 text-sm md:text-lg ">
-                  <Link className="hover:text-primary" target="_blank" href="#">
+                  <Link className="hover:text-primary"  href="/#clubs">
                     Clubs
                   </Link>
-                  <Link className="hover:text-primary" target="_blank" href="#">
+                  <Link className="hover:text-primary"  href="/#events">
                     Events
                   </Link>
-                  <Link className="hover:text-primary" target="_blank" href="#">
+                  <Link className="hover:text-primary" href="/gallery">
                     Photo Gallery
                   </Link>
-                  <Link className="hover:text-primary" target="_blank" href="#">
+                  <Link className="hover:text-primary"  href="/post-bearer">
                     Post Bearers
                   </Link>
                 </div>
@@ -80,16 +80,16 @@ export default function Footer()  {
               <div className="md:w-1/3  m-1 p-4  ">
                 <h4 className="font-bold text-md md:text-2xl text-center md:text-left">Important Links</h4>
                 <div className="grid grid-cols-1 gap-1 mt-4 text-sm md:text-lg ">
-                  <Link href="#" className="hover:text-primary">
+                  <Link href="https://nitdgp.ac.in/" target="_blank" className="hover:text-primary">
                     NIT DGP Website
                   </Link>
-                  <Link href="#" className="hover:text-primary">
+                  <Link href="/"  className="hover:text-primary">
                     Contributors
                   </Link>
-                  <Link href="#" className="hover:text-primary">
+                  <Link href="https://placement.nitdgp.ac.in/"  target="_blank" className="hover:text-primary">
                     Placement Portal
                   </Link>
-                  <Link href="#" className="hover:text-primary">
+                  <Link href="https://www.google.com/forms/about/" target="_blank" className="hover:text-primary">
                     Grievance Form
                   </Link>
                 </div>
@@ -107,7 +107,7 @@ export default function Footer()  {
               <div className="flex items-center  w-5/6 md:w-full mt-5 text-sm md:text-base mb-2 mx-auto ">
                 <FaEnvelope className="mr-2 h-4 w-4" />
                 <Link href="mailto:support@figma.com" className="hover:text-primary">
-                  support@figma.com
+                gymkhana@nitdgp.ac.in
                 </Link>
               </div>
 
