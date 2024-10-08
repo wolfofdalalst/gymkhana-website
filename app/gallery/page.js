@@ -36,11 +36,30 @@ export default function GalleryPage() {
               className="object-cover w-full h-full transition-transform duration-300"
               alt={`Gallery Image ${key + 1}`}
             />
+
+            {/* Translucent left-to-right effect */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-transparent to-black"
+              initial={{ left: "-100%" }}
+              whileHover={{ left: "100%" }}
+              transition={{ duration: 0.6 }}
+              style={{
+                position: "absolute",
+                top: 0,
+                bottom: 0,
+                left: 0,
+                right: 0,
+                background:
+                  "linear-gradient(to right, rgba(255,255,255,0.1), rgba(0,0,0,0.5))",
+              }}
+            />
+
+            {/* Border and overlay effect on hover */}
             <motion.div
               className="absolute inset-0 border-4 border-transparent rounded-lg transition-all duration-300"
               whileHover={{
                 borderColor: "rgba(255, 215, 0, 1)",
-                backgroundColor: "rgba(0, 0, 0, 0.6)", 
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
               }}
             />
           </motion.div>
@@ -49,3 +68,4 @@ export default function GalleryPage() {
     </div>
   );
 }
+
