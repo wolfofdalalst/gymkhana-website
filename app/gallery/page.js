@@ -1,28 +1,51 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-export default function page() {
-  let imagePaths = [];
-  for (let i = 1; i <= 10; i++) {
-    imagePaths.push("/Gallery/" + i + ".jpg");
-  }
+export default function GalleryPage() {
+  const imagePaths = Array.from({ length: 12 }, (_, i) => `/Gallery/${i + 1}.jpg`);
+
   return (
-    <div className="w-screen h-screen grid grid-cols-2 grid-rows-5 gap-x-0 gap-y-[5%] md:grid-cols-5 md:grid-rows-2 md:gap-x-[2%] md:px-24">
-      {imagePaths.map((imagePath, key) => (
-        <div
-          className="relative w-3/4 md:w-[100%] h-full overflow-hidden mx-auto my-2 md:my-0"
-          key={key}
-        >
-          <Image
-            src={imagePath}
-            // width={500}
-            // height={200}
-            layout="fill"
-            className="object-contain"
-          />
-        </div>
-      ))}
+    <div className="min-h-screen flex flex-col items-center p-4 md:px-24 bg-gray-900">
+      <motion.h1
+        className="text-4xl md:text-6xl font-bold text-center mb-12 text-gray-100"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        Gallery
+      </motion.h1>
+
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
+        {imagePaths.map((imagePath, key) => (
+          <motion.div
+            key={key}
+            className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300"
+            whileHover={{
+              scale: 1.1,
+              rotate: -2,
+              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5)",
+              transition: { duration: 0.3 },
+            }}
+          >
+            <Image
+              src={imagePath}
+              width={500}
+              height={500}
+              className="object-cover w-full h-full transition-transform duration-300"
+              alt={`Gallery Image ${key + 1}`}
+            />
+            <motion.div
+              className="absolute inset-0 border-4 border-transparent rounded-lg transition-all duration-300"
+              whileHover={{
+                borderColor: "rgba(255, 215, 0, 1)",
+                backgroundColor: "rgba(0, 0, 0, 0.6)", 
+              }}
+            />
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 }
