@@ -71,3 +71,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  overflow-x: hidden; /*To Disable Horizontal Scrolling*/
+}
