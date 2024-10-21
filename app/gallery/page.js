@@ -7,7 +7,7 @@ export default function GalleryPage() {
   const imagePaths = Array.from({ length: 12 }, (_, i) => `/Gallery/${i + 1}.jpg`);
 
   return (
-    <div className="min-h-screen flex flex-col items-center p-4 md:px-24 bg-gray-900">
+    <div className="min-h-screen flex flex-col items-center p-4 md:px-24 bg-black">
       <motion.h1
         className="text-4xl md:text-6xl font-bold text-center mb-12 text-gray-100"
         initial={{ opacity: 0, y: -50 }}

@@ -26,7 +26,7 @@ const Recrave = () => {
       /> */}
 
       {/* To play yt video */}
-      {isClient && (<ReactPlayer url="https://www.youtube.com/watch?v=f5f1kqF4IDU" autoPlay muted controls={false} width='100%' height='100%' loop={true} playing={true} className="absolute inset-0 object-cover"/>)}
+      {isClient && (<ReactPlayer url="https://www.youtube.com/watch?v=f5f1kqF4IDU" autoPlay muted controls={true} width='100%' height='100%' loop={true} playing={true} className="absolute inset-0 object-cover"/>)}
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.55)] flex items-center justify-center p-6">
