@@ -77,10 +77,10 @@ function Navbar() {
         } `}
       >
         <Image
-          src="/gymkhana_logo.webp"
+          src="/Gymkhana Logo Final White.png"
           alt="Gymkhana Logo"
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           className={`${isScrolled ? "md:hidden" : ""}`}
         />
 
@@ -91,8 +91,8 @@ function Navbar() {
         <Image
           src="/NIT_Durgapur_logo.webp"
           alt="NIT DGP Logo"
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           className={`hidden md:flex ${isScrolled ? "md:hidden" : ""}`}
         />
 
