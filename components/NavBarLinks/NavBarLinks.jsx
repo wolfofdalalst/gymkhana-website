@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const NavBarLinks = (props) => {
   return (
-    <div className={`w-full md:w-fit lg:w-fit h-12 px-5 py-2 bg-black flex items-center justify-center gap-7 lg:gap-11 rounded-full border-white border-[1px] shadow shadow-white ${(props.isScrolled && !props.isScrollingUp) ? 'hidden' : 'visible'} ${props.isScrolled ? 'shadow-md shadow-gray-400' : ''} transition-all duration-1000 ease-in-out overflow-hidden`}>
+    <div className={`w-full md:w-fit lg:w-fit h-12 px-5 py-2 bg-black flex items-center justify-center gap-7 lg:gap-11 rounded-full border-white border-[1px] shadow shadow-white ${(props.isScrolled && !props.isScrollingUp) ? 'invisible opacity-0' : 'visible opacity-100'} ${props.isScrolled ? 'shadow-md shadow-gray-400' : ''} transition-all duration-500 ease-in-out overflow-hidden`}>
       <Link
         href="/"
         className="group text-white  md:text-sm xl:text-lg font-medium whitespace-nowrap hover:text-neutral-300">
