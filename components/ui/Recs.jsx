@@ -13,18 +13,23 @@ const Recs = () => {
     }, [])
 
   return (
-    <div className="relative w-screen h-[50vh] md:h-[70vh] lg:h-screen md:mb-10 lg:mb-20">
+    <div className="relative w-screen h-[50vh] md:h-[70vh] lg:h-screen sm:mb-10 lg:mb-20 select-none ">
       {/* Video Background */}
       {/* To play internal video */}
-      {/* <video
-    src="/RecsVideo.webm"
-    autoPlay
-    muted
-    loop
-    className="absolute inset-0 w-full h-full object-cover"
-  /> */}
+
+
+            <video
+              src="/test_video.mp4"
+              autoPlay
+              muted
+              loop
+              className="absolute inset-0 m-auto border-2  w-[90vw] h-full hover:border-primary rounded-xl object-cover"
+            />
+
+
+  
       {/* To play yt video */}
-      {isClient && (<ReactPlayer url="https://www.youtube.com/watch?v=l4NFc4FN_wM" autoPlay muted controls={false} width='100%' height='100%' loop={true} playing={true} className="absolute inset-0 w-full h-full object-cover" />)}
+      {/* {isClient && (<ReactPlayer url="https://www.youtube.com/watch?v=l4NFc4FN_wM" autoPlay muted controls={false} width='80%' height='100%' loop={true} playing={true} className="absolute inset-0 w-full h-full object-cover" />)} */}
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.55)] flex items-center justify-center p-6">
@@ -57,3 +62,4 @@ const Recs = () => {
 }
 
 export default Recs
+

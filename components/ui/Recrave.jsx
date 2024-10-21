@@ -14,19 +14,20 @@ const Recrave = () => {
   }, [])
 
   return (
-    <div className="relative w-screen h-[40vh] md:h-[70vh] lg:h-screen mb-8 md:mb-10 lg:mb-20">
+    <div className="relative w-screen h-[40vh] md:h-[70vh] lg:h-screen mb-8 md:mb-10 lg:mb-20 select-none">
+
       {/* Video Background */}
       {/* To play internal video  */}
-      {/* <video
-        src="/RecraveVideo.webm"
+      <video
+        src="/test_video.mp4"
         autoPlay
         muted
         loop
-        className="absolute inset-0 w-full h-full object-cover"
-      /> */}
+        className="absolute inset-0 m-auto border-2  w-[90vw] h-full hover:border-primary rounded-xl object-cover"
+      />
 
-      {/* To play yt video */}
-      {isClient && (<ReactPlayer url="https://www.youtube.com/watch?v=f5f1kqF4IDU" autoPlay muted controls={true} width='100%' height='100%' loop={true} playing={true} className="absolute inset-0 object-cover"/>)}
+      {/* To play yt video
+      {isClient && (<ReactPlayer url="https://www.youtube.com/watch?v=f5f1kqF4IDU" autoPlay muted controls={true} width='80vw' height='100%' loop={true} playing={true} className="absolute inset-0 m-auto object-cover "/>)} */}
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.55)] flex items-center justify-center p-6">
