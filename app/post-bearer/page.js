@@ -6,7 +6,7 @@ export default function PostBearer() {
     {
       name: "PRASANT SAHU",
       post: "PRESIDENT",
-      src: "/PostBearers/Presi.jpeg",
+      src: "/PostBearers/Presi.png",
       socials: {
         linkedin:
           "https://www.linkedin.com/in/prash482/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -18,7 +18,7 @@ export default function PostBearer() {
     {
       name: "SHIVANSHU KUMAR",
       post: "VICE PRESIDENT",
-      src: "/PostBearers/VP.jpeg",
+      src: "/PostBearers/VP.png",
       socials: {
         linkedin:
           "https://www.linkedin.com/in/shivanshu-kumar-aa053a23b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -31,7 +31,7 @@ export default function PostBearer() {
     {
       name: "ANKAN DATTA",
       post: "GENERAL SECRETARY",
-      src: "/PostBearers/GenSec.jpeg",
+      src: "/PostBearers/GenSec.png",
       socials: {
         linkedin:
           "https://www.linkedin.com/in/ankan-datta-70422b245/edit/forms/next-action/after-connect-update-profile/",
@@ -43,7 +43,7 @@ export default function PostBearer() {
     {
       name: "SUJAL KUMAR",
       post: "AGS - SOCIAL & SPORTS",
-      src: "/PostBearers/Ags_Sports.jpeg",
+      src: "/PostBearers/Ags_Sports.png",
       socials: {
         linkedin:
           "https://www.linkedin.com/in/sujal-kumar-aab83525b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -54,7 +54,7 @@ export default function PostBearer() {
     {
       name: "ARKARUP MITRA",
       post: "AGS - CULTURAL",
-      src: "/PostBearers/Ags_Culture.jpeg",
+      src: "/PostBearers/Ags_Culture.png",
       socials: {
         facebook: "https://www.facebook.com/arkarup.mitra.524?mibextid=JRoKGi",
         instagram:
@@ -64,7 +64,7 @@ export default function PostBearer() {
     {
       name: "KONDURU PRANAVI",
       post: "GIRLS REPRESENTATIVE",
-      src: "/PostBearers/GR.jpeg",
+      src: "/PostBearers/GR.png",
       socials: {
         linkedin: "https://www.linkedin.com/in/pranavi-konduru-9b497526a/",
         instagram:
