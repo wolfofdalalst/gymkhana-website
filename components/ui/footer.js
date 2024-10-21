@@ -1,85 +1,140 @@
-// components/Footer.js
 
 import Link from "next/link";
 import Image from "next/image";
-import { FaGithub } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaFacebookSquare } from "react-icons/fa";
+import React from 'react';
+import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope,FaLinkedin } from 'react-icons/fa';
+import { FaLocationDot } from "react-icons/fa6";
 
-
-
-
-export default function Footer() {
+export default function Footer()  {
   return (
-    <footer className=" mt-4 bg-gray-100 p-8  self-end ">
-      <div className="flex flex-wrap justify-around lg:pl-36 ">
-        <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 sm:mb-0">
-          <Image src="/nit_dgp_logo.webp"  alt="DGP Logo" width={100} height={100} />
-          <Image src="/gymkhana_logo.webp"     alt="SG Logo" width={100} height={100} />
-        </div>
+    <footer className=" bg-darkCard text-white pt-10 pb-2  ">
+      <div className="container mx-auto pl-0 pr-0 flex-col justify-center items-center ">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start ">
+          {/* Left Section: Logo and Text */}
+          <div className="flex-col items-center mb-2 sm:mb-0 md:w-1/4  ">
+  
+            <div className=" hidden sm:flex mb-3 justify-center">
+              <Image src="/Gymkhana Logo Final White (1).png" alt="Logo" width={100} height={100} />
+            </div>
+ 
+            <div className="text-md text-center ">
+              <p>Students&apos; Gymkhana</p>
+              <p>National Institute of Technology, Durgapur</p>
+              <p>West Bengal - 735209</p>
+            </div>
 
-        <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 sm:mb-0" >
-           <div className="relative "> 
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul>
-                <li><Link href="/clubs"><span className="text-gray-700 hover:underline">Clubs</span></Link></li>
-                <li><Link href="/post-bearer"><span className="text-gray-700 hover:underline">Senate</span></Link></li>
-                <li><Link href="/"><span className="text-gray-700 hover:underline">Calendar</span></Link></li>
-                <li><Link href="https://nitdgp.ac.in/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">NIT Durgapur</Link></li>
-              </ul>
-           </div>
-        </div>
 
-        <div  className="w-full sm:w-1/2 lg:w-1/4 mb-8 sm:mb-0">
-          <div className="relative ">
-            <h4 className="text-lg font-semibold mb-4">Address</h4>
-            <p className="text-gray-700">NIT Durgapur</p>
-            <p className="text-gray-700">Mahatma Gandhi Avenue</p>
-            <p className="text-gray-700">Durgapur</p>
-            <p className="text-gray-700">West Bengal, 713209</p>
+
+            <div className="flex mt-2 w-2/6  justify-around mx-auto">
+
+              <Link href="https://www.facebook.com/gymkhana.nitdgp" target="_blank" className="hover:text-primary">
+                <FaFacebook className=" h-5 w-5" />
+              </Link>
+              <Link href="https://www.linkedin.com/company/students-gymkhana-nit-durgapur/" target="_blank" className="hover:text-primary">
+                <FaLinkedin className=" h-5 w-5"/>
+              </Link>
+              <Link href="https://www.instagram.com/gymkhana_nitdgp" target="_blank" className="hover:text-primary">
+                <FaInstagram  className="h-5 w-5"/>
+              </Link>
+
+              </div>
           </div>
-        </div>
-
-        <div  className="w-full sm:w-1/2 lg:w-1/4">
-         <div className="relative w-4/5 " >
-          <h4 className="text-lg font-semibold mb-4">Contact</h4>
-          <p className="text-gray-700">Have any questions?</p>
-          <br />
-          <Link href="/contact"><span className="text-indigo-700 hover:underline">Send a Message</span></Link>
-
-          <div className="flex space-x-4 mt-8 ">
-
-            <Link href="https://www.facebook.com/gymkhana.nitdgp" target="_blank" rel="noopener noreferrer" className="text-black-800">
-
-               <FaFacebookSquare  className="w-8 h-8" />
 
 
-            </Link>
+          <div className="h-56 hidden md:block border-l border-dashed border-gray-400 mx-5"> </div>
 
-            <Link href="https://www.instagram.com/gymkhana_nitdgp" target="_blank" rel="noopener noreferrer" className="text-black-800">
-              
-                <FaInstagram className="w-8 h-8" />
+          <div className="border-t w-5/6 border-dashed border-gray-400 my-4 block md:hidden "></div>
 
-            </Link>
 
-            <Link href="https://github.com/wolfofdalalst/gymkhana-website" target="_blank" rel="noopener noreferrer" className="text-black-100 ">
+          
 
-               <FaGithub  className="w-8 h-8" />
-
-            </Link>
-
-          </div>  {/* icons div */}
-        </div> {/* wrap all div */}
-        </div>  {/* contact div */}
+          {/* Right Section: Links and Contact */}
+          <div className=" w-full md:w-3/4  flex flex-col md:flex-row  items-center md:items-start md:justify-between ">
      
+            <div className="flex  justify-around md:justify-center w-full md:w-2/3 md:flex-row md:space-x-12 mb-2 md:mb-0   ">
 
-        </div>
+              {/* Quick Links */}
+              <div className=" m-1 md:mb-0 md:w-1/3 p-4  ">
+                <h4 className="font-bold text-md md:text-2xl text-center md:text-left">Quick Links</h4>
+                <div className="grid grid-cols-1 gap-1 mt-4 text-sm md:text-lg ">
+                  <Link className="hover:text-primary"  href="/#clubs">
+                    Clubs
+                  </Link>
+                  <Link className="hover:text-primary"  href="/#events">
+                    Events
+                  </Link>
+                  <Link className="hover:text-primary" href="/gallery">
+                    Photo Gallery
+                  </Link>
+                  <Link className="hover:text-primary"  href="/post-bearer">
+                    Post Bearers
+                  </Link>
+                </div>
+              </div>
 
-          <div className=" w-full mt-8 text-center text-gray-500">
-            <p>&copy; 2024 Students&apos; Gymkhana, NIT Durgapur</p>
+
+
+
+
+              {/* Important Links */}
+              <div className="md:w-1/3  m-1 p-4  ">
+                <h4 className="font-bold text-md md:text-2xl text-center md:text-left">Important Links</h4>
+                <div className="grid grid-cols-1 gap-1 mt-4 text-sm md:text-lg ">
+                  <Link href="https://nitdgp.ac.in/" target="_blank" className="hover:text-primary">
+                    NIT DGP Website
+                  </Link>
+                  <Link href="/"  className="hover:text-primary">
+                    Contributors
+                  </Link>
+                  <Link href="https://placement.nitdgp.ac.in/"  target="_blank" className="hover:text-primary">
+                    Placement Portal
+                  </Link>
+                  <Link href="https://www.google.com/forms/about/" target="_blank" className="hover:text-primary">
+                    Grievance Form
+                  </Link>
+                </div>
+              </div>
+
           </div>
 
 
+          <div className="border-t w-5/6 border-dashed border-gray-400 my-4 block md:hidden "></div>
+
+            {/* Contact Us */}
+            <div className="md:w-1/3 md:ml-10 p-4 mt-1  flex-col justify-center items-center  ">
+              <h4 className="font-bold text-lg md:text-2xl text-center md:text-left">Contact Us</h4>
+
+              <div className="flex items-center  w-5/6 md:w-full mt-5 text-sm md:text-base mb-2 mx-auto ">
+                <FaEnvelope className="mr-2 h-4 w-4" />
+                <Link href="mailto:support@figma.com" className="hover:text-primary">
+                gymkhana@nitdgp.ac.in
+                </Link>
+              </div>
+
+              <div className="flex items-center  w-5/6 md:w-full mt-5 text-sm md:text-base mb-2 mx-auto ">
+              <FaLocationDot className="mr-2 h-5 w-5" />
+                <div className="text-sm md:text-base">
+                <p>National Institute of Technology, Durgapur</p>
+                <p>West Bengal - 735209</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        
+        
+        <div className="border-t w-5/6 2xl:w-full border-dashed border-gray-400 mx-auto my-4 "></div>
+
+       
+        <div className="text-center mb-1 text-sm">
+          <p>&copy; 2024 Students&apos; Gymkhana, NIT Durgapur</p>
+        </div>
+      </div>
     </footer>
   );
 }
+
+// export default Footer;

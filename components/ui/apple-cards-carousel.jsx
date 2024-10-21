@@ -1,4 +1,4 @@
-"use client";
+"use client";;
 import React, {
   useEffect,
   useRef,
@@ -17,7 +17,7 @@ import Image from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 
 export const CarouselContext = createContext({
-  onCardClose: () => { },
+  onCardClose: () => {},
   currentIndex: 0,
 });
 
@@ -83,12 +83,12 @@ export const Carousel = ({
           onScroll={checkScrollability}>
           <div
             className={cn(
-              "absolute right-0  z-[1000] h-auto  w-[5%] overflow-hidden bg-gradient-to-l"
+              "absolute right-0 z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l"
             )}></div>
 
           <div
             className={cn(
-              "flex flex-row justify-start gap-4 pl-4",
+              "flex flex-row justify-start gap-5 pl-4",
               // remove max-w-4xl if you want the carousel to span the full width of its container
               "max-w-7xl mx-auto"
             )}>
@@ -109,7 +109,7 @@ export const Carousel = ({
                   },
                 }}
                 key={"card" + index}
-                className="last:pr-[5%] md:last:pr-[33%]  rounded-3xl">
+                className="last:pr-[5%] md:last:pr-[33%] rounded-2xl">
                 {item}
               </motion.div>
             ))}
@@ -173,7 +173,9 @@ export const Card = ({
 
   return (<>
     <AnimatePresence>
-      {open && (
+      {/* uncomment for popup effect */}
+      {/* {open && (} */}
+      {false && (
         <div className="fixed inset-0 h-screen z-50 overflow-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -197,11 +199,11 @@ export const Card = ({
               className="text-base font-medium text-black dark:text-white">
               {card.category}
             </motion.p>
-            <motion.p
+            {/* <motion.p
               layoutId={layout ? `title-${card.title}` : undefined}
               className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white">
               {card.title}
-            </motion.p>
+            </motion.p> */}
             <div className="py-10">{card.content}</div>
           </motion.div>
         </div>
@@ -210,7 +212,7 @@ export const Card = ({
     <motion.button
       layoutId={layout ? `card-${card.title}` : undefined}
       onClick={handleOpen}
-      className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10">
+      className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-[20rem] w-96 overflow-hidden flex flex-col items-start justify-start relative z-10">
       <div
         className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
       <div className="relative z-40 p-8">
