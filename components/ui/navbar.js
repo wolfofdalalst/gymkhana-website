@@ -13,6 +13,7 @@ import {
 import { ContactUsModal } from "../contactUsModal/contactUsModal";
 import { useRouter } from "next/navigation";
 import NavBarLinks from "../NavBarLinks/NavBarLinks";
+import { FaLinkedin } from "react-icons/fa6";
 
 function Navbar() {
   const router = useRouter();
@@ -64,14 +65,16 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-screen md:h-fit sticky top-0 py-5 md:py-3 bg-black bg-opacity-100  ${
+      className={`w-screen h-fit sticky top-0 py-5 md:py-3 bg-black bg-opacity-100  ${
         isScrolled ? "bg-opacity-50 md:bg-transparent" : ""
       } ${
-        isOpen ? "backdrop-blur h-[100vh]" : "h-fit"
-      } z-50 transition-all duration-300 ease-in-out overflow-hidden`}
+        isOpen ? "" : ""
+      } z-40 transition-all duration-300 ease-in-out md:overflow-hidden`}
     >
       <div
-        className={`w-full h-6 md:h-fit flex items-center bg-transparent justify-between lg:gap-x-24 md:justify-evenly px-5`}
+        className={`w-full h-6 md:h-fit flex items-center bg-transparent justify-between lg:gap-x-24 md:justify-evenly px-5 ${
+          isOpen ? "backdrop-blur" : ""
+        } `}
       >
         <Image
           src="/gymkhana_logo.webp"
@@ -116,69 +119,57 @@ function Navbar() {
 
       {/* Hamburger Menu */}
       <div
-        className={`w-screen md:hidden flex flex-col space-y-2 mt-2 transition-max-height overflow-hidden ease-in-out duration-700 ${
-          isOpen ? "h-[100vh]" : "h-0"
+        className={`z-50 w-0 h-0 absolute md:hidden flex flex-col space-y-2 mt-2 transition-all overflow-hidden ease-in-out duration-700 ${
+          isOpen ? "right-0 w-[50vw] h-[100vh] backdrop-blur" : "right-8"
         }`}
       >
-        <ul className="w-full h-3/4 flex flex-col gap-y-10 items-end justify-start p-7 text-3xl font-semibold">
+        <ul className="w-full h-3/4 flex flex-col gap-y-10 items-end justify-start p-7 text-2xl font-semibold">
           <li>
-            <Link href="/" className="text-gray-300" onClick={toggleMenu}>
+            <Link href="/" className="text-gray-300 whitespace-nowrap" onClick={toggleMenu}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/#about" className="text-gray-300" onClick={toggleMenu}>
+            <Link href="/#about" className="text-gray-300 whitespace-nowrap" onClick={toggleMenu}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/#clubs" className="text-gray-300" onClick={toggleMenu}>
+            <Link href="/#clubs" className="text-gray-300 whitespace-nowrap" onClick={toggleMenu}>
               Clubs
             </Link>
           </li>
           <li>
-            <Link href="/#events" className="text-gray-300" onClick={toggleMenu}>
+            <Link href="/#events" className="text-gray-300 whitespace-nowrap" onClick={toggleMenu}>
               Events
             </Link>
           </li>
           <li>
-            <Link
-              href="/post-bearer"
-              className="text-gray-300"
-              onClick={toggleMenu}
+            <Link href="/post-bearer" className="text-gray-300 whitespace-nowrap" onClick={toggleMenu}
             >
               Post Bearer
             </Link>
           </li>
           <li>
-            <Link
-              href="/gallery"
-              className="text-gray-300"
-              onClick={toggleMenu}
-            >
+            <Link href="/contact" className="text-gray-300" onClick={toggleMenu}>
               Gallery
             </Link>
           </li>
           <li>
-            <Link
-              href="/https://www.google.com/forms/about/"
-              className="text-primary"
-              target="_blank"
-              onClick={toggleMenu}
-            >
+            <Link href="/https://www.google.com/forms/about/" className="text-xl font-normal text-primary whitespace-nowrap" target="_blank" onClick={toggleMenu}>
               Grievance Form
             </Link>
           </li>
         </ul>
 
-        <div className="w-full">
-          <ul className="w-1/2 flex items-center justify-evenly p-2">
+        {/* <div className="w-full">
+          <ul className="w-full flex items-center justify-evenly p-2">
             <li>
               <a
                 href="https://github.com/wolfofdalalst/gymkhana-website"
                 target="_blank"
               >
-                <FaGithub className="w-8 h-8 text-gray-100" />
+                <FaLinkedin className="w-8 h-8 text-gray-100" />
               </a>
             </li>
             <li>
@@ -206,7 +197,7 @@ function Navbar() {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
