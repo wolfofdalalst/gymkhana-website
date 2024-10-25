@@ -151,7 +151,7 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="text-gray-300" onClick={toggleMenu}>
+            <Link href="/gallery" className="text-gray-300" onClick={toggleMenu}>
               Gallery
             </Link>
           </li>

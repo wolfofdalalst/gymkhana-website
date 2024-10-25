@@ -47,7 +47,7 @@ const Recrave = () => {
 
           {/* Left Side (Paragraph on large screens, below heading on small screens) */}
           <div className="w-full lg:w-2/3">
-            <div className="font-semibold text-sm md:text-lg lg:text-4xl text-gray-200 leading-relaxed">
+            <div className="font-semibold text-sm w-11/12 sm:w-full mx-auto text-center sm:text-start md:text-lg lg:text-4xl text-gray-200 leading-relaxed">
               Students&apos; Gymkhana of NIT DGP brings the latest edition of - reCrave: annual food fest of NIT Durgapur.
             </div>
           </div>

@@ -91,13 +91,13 @@ export default function Home() {
           </div>
         </section> */}
 
-        <div className="w-full h-full py-20">
+        <section id="clubs" className="w-full h-full py-20">
           <h1 className="font-extrabold text-5xl text-white text-center mb-7">
             Clubs
           </h1>
           {/* <Carousel items={cards} /> */}
           <SlideComponent />
-        </div>
+        </section>
 
         <section id="events">
           <div className="h-[7vh]"></div>

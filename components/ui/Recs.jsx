@@ -49,7 +49,7 @@ const Recs = () => {
 
           {/* Right Side (Paragraph) */}
           <div className="w-full md:w-2/3">
-            <div className="font-semibold text-sm md:text-lg lg:text-4xl text-gray-200 leading-relaxed">
+            <div className="font-semibold text-sm w-11/12 sm:w-full mx-auto text-center sm:text-start md:text-lg lg:text-4xl text-gray-200 leading-relaxed">
               Recstacy is the annual cultural fest of NIT Durgapur, celebrated with a diverse array of events like dance, music, drama, literary competitions, and workshops.
             </div>
           </div>
