@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 import Recs from "@/components/ui/Recs";
 import ReCrave from "@/components/ui/Recrave";
 import { Card, Carousel } from "@/components/ui/apple-cards-carousel";
-// import SlideComponent from "./clubs/SlideComponent";
+import SlideComponent from "./clubs/SlideComponent";
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -95,8 +95,8 @@ export default function Home() {
           <h1 className="font-extrabold text-5xl text-white text-center mb-7">
             Clubs
           </h1>
-          <Carousel items={cards} />
-          {/* <SlideComponent /> */}
+          {/* <Carousel items={cards} /> */}
+          <SlideComponent />
         </div>
 
         <section id="events">
