@@ -14,7 +14,7 @@ const Recrave = () => {
   }, [])
 
   return (
-    <div className="relative w-screen h-[40vh] md:h-[70vh] lg:h-screen mb-8 md:mb-10 lg:mb-20 select-none">
+    <div className="relative w-screen h-[50vh] md:h-[70vh] lg:h-screen mb-8  sm:mb-10 lg:mb-20 select-none">
 
       {/* Video Background */}
       {/* To play internal video  */}

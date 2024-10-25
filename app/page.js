@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 import Recs from "@/components/ui/Recs";
 import ReCrave from "@/components/ui/Recrave";
 import { Card, Carousel } from "@/components/ui/apple-cards-carousel";
+// import SlideComponent from "./clubs/SlideComponent";
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -67,11 +68,11 @@ export default function Home() {
         </div>
 
         {/* Sections Rendered Based on Scroll */}
-        <div className="flex items-center justify-center w-full md:w-[70%] mx-auto mt-6 mb-24">
+        <div className="flex items-center justify-center w-full md:w-[70%] mx-auto sm:mt-6  sm:mb-24">
           {/* About Section */}
           <div className="w-full">
             <section id="about">
-              <div className="h-[7vh]"></div>
+              {/* <div className="h-[7vh]"></div> */}
               <About />
             </section>
           </div>
@@ -95,6 +96,7 @@ export default function Home() {
             Clubs
           </h1>
           <Carousel items={cards} />
+          {/* <SlideComponent /> */}
         </div>
 
         <section id="events">

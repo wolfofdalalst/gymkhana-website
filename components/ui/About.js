@@ -5,7 +5,7 @@ import { Bounce, Fade, Hinge } from "react-awesome-reveal";
 export default function About() {
   return (
     <Fade>
-      <div className="box-border w-full p-5 mt-10 bg-darkCard border border-transparent md:hover:border-primary active:border-primary rounded-3xl lg:mr-5 sm:mr-0 transition-all duration-500 ease-in-out">
+      <div className="box-border w-full p-5 sm:mt-10  border border-transparent  rounded-3xl lg:mr-5 sm:mr-0 transition-all duration-500 ease-in-out">
 
         <h2 className="text-3xl text-center font-bold text-primary mb-8">About</h2>
         <p className="text-lg text-center text-tertiary mb-6">

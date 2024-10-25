@@ -13,7 +13,7 @@ const Recs = () => {
     }, [])
 
   return (
-    <div className="relative w-screen h-[50vh] md:h-[70vh] lg:h-screen sm:mb-10 lg:mb-20 select-none ">
+    <div className="relative w-screen h-[50vh] md:h-[70vh] lg:h-screen mb-10 lg:mb-20 select-none ">
       {/* Video Background */}
       {/* To play internal video */}
 
