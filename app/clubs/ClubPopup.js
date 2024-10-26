@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, Fawebsite } from 'react-icons/fa';
 import Link from "next/link";
+import { TbWorld } from "react-icons/tb";
 
 const ClubPopup = ({ club, onClose }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,8 +34,8 @@ const ClubPopup = ({ club, onClose }) => {
           <Link href={club.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-primary text-black">
             <FaFacebook className="h-6 w-6" />
           </Link>
-          <Link href={club.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-primary text-black">
-            <FaLinkedin className="h-6 w-6" />
+          <Link href={club.website} target="_blank" rel="noopener noreferrer" className="hover:text-primary text-black">
+            <TbWorld className="h-7 w-7" />
           </Link>
         </div>
       </div>
