@@ -67,7 +67,7 @@ function Navbar() {
     <nav
       className={`w-screen h-fit sticky top-0 py-5 md:py-3 bg-black bg-opacity-100
       ${
-        isOpen ? "backdrop-blur" : ""
+        isOpen ? "" : ""
       }
       ${
         isScrolled ? `${(!isOpen)?'bg-opacity-50':''} md:bg-transparent` : ""
@@ -120,41 +120,41 @@ function Navbar() {
       </div>
 
       {/* Hamburger Menu */}
-      <div className={`absolute top-[100%] left-0 backdrop-blur-lg w-screen h-screen ${isOpen ? 'visible' : 'hidden'}`} onClick={toggleMenu}></div>
+      <div className={`absolute top-[100%] left-0 w-screen backdrop-blur-sm h-screen ${isOpen ? 'visible' : 'hidden'}`} onClick={toggleMenu}></div>
       <div
         className={`z-50 w-0 h-0 absolute md:hidden flex flex-col space-y-2 transition-all overflow-hidden ease-in-out duration-700 ${
-          isOpen ? "top-[100%] right-0 w-[50vw] h-[100vh] backdrop-blur bg-[rgba(0,0,0,0.8)] shadow-lg shadow-blue-500" : "right-8"
+          isOpen ? "top-[100%] right-0 w-[50vw] h-[100vh] backdrop-blur-md bg-[rgba(0,0,0,0.6)] shadow-md shadow-blue-500" : "right-8"
         }`}
       >
-        <ul className="w-full h-3/4 flex flex-col gap-y-10 items-end justify-start p-7 text-xl font-medium text-white">
+        <ul className="w-full h-3/4 flex flex-col gap-y-10 items-end justify-start p-7 text-xl font-normal">
           <li>
-            <Link href="/" className="whitespace-nowrap" onClick={toggleMenu}>
+            <Link href="/" className="text-white whitespace-nowrap" onClick={toggleMenu}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/#about" className="whitespace-nowrap" onClick={toggleMenu}>
+            <Link href="/#about" className="text-white whitespace-nowrap" onClick={toggleMenu}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/#clubs" className="whitespace-nowrap" onClick={toggleMenu}>
+            <Link href="/#clubs" className="text-white whitespace-nowrap" onClick={toggleMenu}>
               Clubs
             </Link>
           </li>
           <li>
-            <Link href="/#events" className="whitespace-nowrap" onClick={toggleMenu}>
+            <Link href="/#events" className="text-white whitespace-nowrap" onClick={toggleMenu}>
               Events
             </Link>
           </li>
           <li>
-            <Link href="/post-bearer" className="whitespace-nowrap" onClick={toggleMenu}
+            <Link href="/post-bearer" className="text-white whitespace-nowrap" onClick={toggleMenu}
             >
               Post Bearer
             </Link>
           </li>
           <li>
-            <Link href="/gallery" className="text-gray-300" onClick={toggleMenu}>
+            <Link href="/gallery" className="text-white whitespace-nowrap" onClick={toggleMenu}>
               Gallery
             </Link>
           </li>
