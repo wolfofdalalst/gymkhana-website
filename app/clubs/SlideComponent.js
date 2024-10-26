@@ -218,7 +218,6 @@ const clubsData = [
     facebook: "https://facebook.com/club2",
     website: "https://website.com/club2",
   },
-  // Add more clubs as needed
 ];
 
 const SlideComponent = () => {
@@ -228,24 +227,24 @@ const SlideComponent = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerHeight >= 950) {
+      if (window.innerHeight >= 950) { 
         setHeight("45vh");
-      } else if (window.innerHeight >= 850) {
-        setHeight("44vh");
-      } else if (window.innerHeight >= 750) {
+      } else if (window.innerHeight >= 850) { 
+        setHeight("40vh");
+      } else if (window.innerHeight >= 750) {  
+        setHeight("42vh");
+      } else if (window.innerHeight >= 700) {  
         setHeight("47vh");
-      } else if (window.innerHeight >= 700) {
-        setHeight("50vh");
-      } else if (window.innerHeight >= 650) {
+      } else if (window.innerHeight >= 650) {  
+        setHeight("40vh");
+      } else if (window.innerHeight >= 600) {  
         setHeight("55vh");
-      } else if (window.innerHeight >= 600) {
-        setHeight("60vh");
-      } else if (window.innerHeight >= 550) {
-        setHeight("65vh");
-      } else if (window.innerHeight >= 300) {
-        setHeight("75vh");
-      } else {
-        setHeight("80vh");
+      } else if (window.innerHeight >= 550) { 
+        setHeight("62vh");
+      } else if (window.innerHeight >= 300) { 
+        setHeight("84vh");
+      } else {                                
+        setHeight("85vh");
       }
     };
 
@@ -330,7 +329,7 @@ const SlideComponent = () => {
               </div>
 
               {/* Social Links Container */}
-              <div className="absolute inset-x-0  bottom-0 transform translate-y-full transition-transform duration-300 ease-in-out md:group-hover:-translate-y-[80%]  text-center p-2">
+              <div className="absolute inset-x-0  bottom-0 transform translate-y-full transition-transform duration-300 ease-in-out group-hover:-translate-y-3  text-center p-2">
                 <Link
                   href={club.instagram}
                   target="_blank"
