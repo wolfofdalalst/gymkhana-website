@@ -246,7 +246,7 @@ const SlideComponent = () => {
   return (
     <div className="relative flex flex-row items-center justify-center">
 
-      <div className="button-prev bg-transparent p-2 cursor-pointer">
+      <div className="button-prev bg-transparent p-2 cursor-pointer transform transition duration-300 hover:scale-125">
         <FaAngleLeft className=' h-10 w-10' />
       </div>
       
@@ -320,7 +320,7 @@ const SlideComponent = () => {
       </Swiper>
       
 
-      <div className="button-next bg-transparent p-2 cursor-pointer">
+      <div className="button-next bg-transparent p-2 cursor-pointer transform transition duration-300 hover:scale-125">
         <FaAngleRight className=' h-10 w-10' />
       </div>
 

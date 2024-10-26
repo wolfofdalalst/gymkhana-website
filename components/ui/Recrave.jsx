@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Zoom } from 'react-awesome-reveal';
 import { Cover } from './cover';
 import ReactPlayer from 'react-player/youtube';
+import Link from 'next/link';
 
 const Recrave = () => {
 
@@ -35,11 +36,11 @@ const Recrave = () => {
           
           {/* Right Side (Heading on large screens, above paragraph on small screens) */}
           <Zoom>
-            <div className="w-full lg:w-1/3 text-center lg:text-right">
+            <Link href="https://www.instagram.com/gymkhana_nitdgp" className="w-full lg:w-1/3 text-center hover:border-primary lg:text-right">
               <h1 className="font-bold text-4xl md:text-5xl text-white">
                 Recrave
               </h1>
-            </div>
+            </Link>
           </Zoom>
 
           {/* Curved Vertical Border */}
