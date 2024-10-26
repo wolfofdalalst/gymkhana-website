@@ -284,6 +284,10 @@ const SlideComponent = () => {
     setSelectedClub(club);
   };
 
+  const handleLinkClick = (e) => {
+    e.stopPropagation();
+  };
+
   const closePopup = () => {
     setSelectedClub(null);
   };
@@ -348,7 +352,8 @@ const SlideComponent = () => {
                   target="_blank" 
                   rel="noopener noreferrer">
 
-                <h3 className="text-center text-white hover:text-primary active:text-blue-800  font-bold text-md  transform transition-transform duration-500 ease-in-out  group-hover:-translate-y-9 group-hover:scale-90 pb-1">
+                <h3 className="text-center text-white hover:text-primary active:text-blue-800  font-bold text-md  transform transition-transform duration-500 ease-in-out  group-hover:-translate-y-9 group-hover:scale-90 pb-1"
+                onClick={handleLinkClick}>
                   {club.name}
                 </h3>
 
@@ -362,6 +367,7 @@ const SlideComponent = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary active:text-blue-800 text-white mx-3"
+                  onClick={handleLinkClick}
                 >
                   <FaInstagram className="inline h-6 w-6" />
                 </Link>
@@ -370,6 +376,7 @@ const SlideComponent = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary active:text-blue-800 text-white mx-3"
+                  onClick={handleLinkClick}
                 >
                   <FaFacebook className="inline h-6 w-6" />
                 </Link>
@@ -378,6 +385,7 @@ const SlideComponent = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary active:text-blue-800 text-white mx-3"
+                  onClick={handleLinkClick}
                 >
                   <FaLinkedin className="inline h-6 w-6" />
                 </Link>
