@@ -272,9 +272,10 @@ const SlideComponent = () => {
   if (!isMounted) return null;
 
   return (
-    <div className="min-h-[400px] relative flex flex-row items-center justify-center">
-      <div className="button-prev bg-transparent p-2 cursor-pointer">
-        <FaAngleLeft className="h-10 w-10 hover:scale-[1.3] hover:text-blue-800 active:-translate-x-2 transition-all duration-500" />
+    <div className="relative flex flex-row items-center justify-center">
+
+      <div className="button-prev bg-transparent p-2 cursor-pointer transform transition duration-300 hover:scale-125">
+        <FaAngleLeft className=' h-10 w-10' />
       </div>
 
       <Swiper
@@ -360,8 +361,8 @@ const SlideComponent = () => {
         ))}
       </Swiper>
 
-      <div className="button-next bg-transparent p-2 cursor-pointer">
-        <FaAngleRight className="h-10 w-10 hover:scale-[1.3] hover:text-blue-800 active:translate-x-2 transition-all duration-500" />
+      <div className="button-next bg-transparent p-2 cursor-pointer transform transition duration-300 hover:scale-125">
+        <FaAngleRight className=' h-10 w-10' />
       </div>
 
       {selectedClub && <ClubPopup club={selectedClub} onClose={closePopup} />}
