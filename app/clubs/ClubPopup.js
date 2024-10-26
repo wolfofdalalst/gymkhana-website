@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaFacebook, FaInstagram, Fawebsite } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, Fawebsite } from 'react-icons/fa';
 import Link from "next/link";
 import { TbWorld } from "react-icons/tb";
 
@@ -28,14 +28,14 @@ const ClubPopup = ({ club, onClose }) => {
         <h2 className="text-xl text-center font-bold mb-2">{club.name}</h2>
         <p className="text-gray-700 text-center mb-4">{club.description}</p>
         <div className="flex justify-around mx-auto mt-4 w-44">
-          <Link href={club.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-primary text-black">
+          <Link href={club.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-primary active:text-blue-800 text-black">
             <FaInstagram className="h-6 w-6" />
           </Link>
-          <Link href={club.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-primary text-black">
+          <Link href={club.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-primary active:text-blue-800 text-black">
             <FaFacebook className="h-6 w-6" />
           </Link>
-          <Link href={club.website} target="_blank" rel="noopener noreferrer" className="hover:text-primary text-black">
-            <TbWorld className="h-7 w-7" />
+          <Link href={club.website} target="_blank" rel="noopener noreferrer" className="hover:text-primary active:text-blue-800 text-black">
+            <FaLinkedin className="h-6 w-6" />
           </Link>
         </div>
       </div>
