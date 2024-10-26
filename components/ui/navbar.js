@@ -65,10 +65,12 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-screen h-fit sticky top-0 py-5 md:py-3 bg-black bg-opacity-100  ${
-        isScrolled ? "bg-opacity-50 md:bg-transparent" : ""
-      } ${
-        isOpen ? "" : ""
+      className={`w-screen h-fit sticky top-0 py-5 md:py-3 bg-black bg-opacity-100
+      ${
+        isOpen ? "backdrop-blur" : ""
+      }
+      ${
+        isScrolled ? `${(!isOpen)?'bg-opacity-50':''} md:bg-transparent` : ""
       } z-40 transition-all duration-300 ease-in-out md:overflow-hidden`}
     >
       <div
@@ -118,34 +120,35 @@ function Navbar() {
       </div>
 
       {/* Hamburger Menu */}
+      <div className={`absolute top-[100%] left-0 backdrop-blur-lg w-screen h-screen ${isOpen ? 'visible' : 'hidden'}`} onClick={toggleMenu}></div>
       <div
-        className={`z-50 w-0 h-0 absolute md:hidden flex flex-col space-y-2 mt-2 transition-all overflow-hidden ease-in-out duration-700 ${
-          isOpen ? "right-0 w-[50vw] h-[100vh] backdrop-blur" : "right-8"
+        className={`z-50 w-0 h-0 absolute md:hidden flex flex-col space-y-2 transition-all overflow-hidden ease-in-out duration-700 ${
+          isOpen ? "top-[100%] right-0 w-[50vw] h-[100vh] backdrop-blur bg-[rgba(0,0,0,0.8)] shadow-lg shadow-blue-500" : "right-8"
         }`}
       >
-        <ul className="w-full h-3/4 flex flex-col gap-y-10 items-end justify-start p-7 text-2xl font-semibold">
+        <ul className="w-full h-3/4 flex flex-col gap-y-10 items-end justify-start p-7 text-xl font-medium text-white">
           <li>
-            <Link href="/" className="text-gray-300 whitespace-nowrap" onClick={toggleMenu}>
+            <Link href="/" className="whitespace-nowrap" onClick={toggleMenu}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/#about" className="text-gray-300 whitespace-nowrap" onClick={toggleMenu}>
+            <Link href="/#about" className="whitespace-nowrap" onClick={toggleMenu}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/#clubs" className="text-gray-300 whitespace-nowrap" onClick={toggleMenu}>
+            <Link href="/#clubs" className="whitespace-nowrap" onClick={toggleMenu}>
               Clubs
             </Link>
           </li>
           <li>
-            <Link href="/#events" className="text-gray-300 whitespace-nowrap" onClick={toggleMenu}>
+            <Link href="/#events" className="whitespace-nowrap" onClick={toggleMenu}>
               Events
             </Link>
           </li>
           <li>
-            <Link href="/post-bearer" className="text-gray-300 whitespace-nowrap" onClick={toggleMenu}
+            <Link href="/post-bearer" className="whitespace-nowrap" onClick={toggleMenu}
             >
               Post Bearer
             </Link>
@@ -156,49 +159,13 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/https://www.google.com/forms/about/" className="text-xl font-normal text-primary whitespace-nowrap" target="_blank" onClick={toggleMenu}>
+            <Link href="/https://www.google.com/forms/about/" className="text-xl font-semibold text-primary whitespace-nowrap" target="_blank" onClick={toggleMenu}>
               Grievance Form
             </Link>
           </li>
         </ul>
-
-        {/* <div className="w-full">
-          <ul className="w-full flex items-center justify-evenly p-2">
-            <li>
-              <a
-                href="https://github.com/wolfofdalalst/gymkhana-website"
-                target="_blank"
-              >
-                <FaLinkedin className="w-8 h-8 text-gray-100" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/gymkhana.nitdgp"
-                target="_blank"
-              >
-                <FontAwesomeIcon
-                  icon={faFacebookF}
-                  size="2x"
-                  className="text-gray-100"
-                />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/gymkhana_nitdgp"
-                target="_blank"
-              >
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  size="2x"
-                  className="text-gray-100"
-                />
-              </a>
-            </li>
-          </ul>
-        </div> */}
       </div>
+      {/* </div> */}
     </nav>
   );
 }
