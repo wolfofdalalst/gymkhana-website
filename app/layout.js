@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "../components/ui/navbar";
 import Footer from "../components/ui/footer";
 
-import Providers from "@/components/ui/ProgressBarProvider";
+// import Providers from "@/components/ui/ProgressBarProvider";
 
 import { Montserrat, Lato, Poppins } from 'next/font/google';
 
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} ${montserrat.className} ${lato.className} ${poppins.className}`}>
         <Navbar />
-        <Providers>{children}</Providers>
+        {children}
         <Footer />
       </body>
     </html>

@@ -36,10 +36,10 @@ const Recrave = () => {
           
           {/* Right Side (Heading on large screens, above paragraph on small screens) */}
           <Zoom>
-            <Link href="https://www.instagram.com/gymkhana_nitdgp" className="w-full lg:w-1/3 text-center hover:border-primary lg:text-right">
-              <h1 className="font-bold text-4xl md:text-5xl text-white">
+            <Link href="https://www.instagram.com/gymkhana_nitdgp" target='_blank' className="w-full lg:w-1/3 text-center  lg:text-right">
+              <h1 className="font-bold text-4xl md:text-5xl text-white hover:text-primary ">
                 Recrave
-              </h1>
+              </h1> 
             </Link>
           </Zoom>
 

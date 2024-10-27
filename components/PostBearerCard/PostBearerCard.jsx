@@ -71,3 +71,80 @@ const PostBearerCard = ({ src, post, name, socials }) => {
 }
 
 export default PostBearerCard
+
+
+
+
+// "use client";
+// import React from "react";
+// import { BackgroundGradient } from "../ui/background-gradient";
+// import Image from "next/image";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faLinkedin, faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
+
+// const PostBearerCard = ({ src, post, name, socials }) => {
+//   return (
+//     <div className="relative w-full h-[85%] mt-9">
+//       <BackgroundGradient
+//         containerClassName="w-full h-full"
+//         className="group rounded-[22px] overflow-hidden transition-all duration-700 ease-in-out hover:scale-105 hover:shadow-2xl"
+//       >
+//         {/* Image Section */}
+//         <div className="w-full h-[70%] relative  px-5  pt-3">
+//           <Image src={src} alt={name} width={120} height={100} />
+//         </div>
+
+//         {/* Content Section */}
+//         <div className="p-4 bg-zinc-900 text-center relative">
+//           <div className="transition-opacity duration-700 ease-in-out opacity-100 group-hover:opacity-0">
+//             <h2 className="text-lg md:text-xl text-primary font-bold mb-1">
+//               {name}
+//             </h2>
+//             <p className="text-sm md:text-base text-gray-300">{post}</p>
+//           </div>
+
+//           {/* Social Icons */}
+//           <div className="absolute inset-0 flex items-center justify-center transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 bg-gradient-to-b from-transparent via-black to-black/70">
+//             <ul className="flex space-x-4">
+//               {socials?.linkedin && (
+//                 <li>
+//                   <a href={socials.linkedin} target="_blank" rel="noopener noreferrer">
+//                     <FontAwesomeIcon
+//                       icon={faLinkedin}
+//                       className="text-gray-100 hover:text-primary transition duration-300"
+//                       size="lg"
+//                     />
+//                   </a>
+//                 </li>
+//               )}
+//               {socials?.facebook && (
+//                 <li>
+//                   <a href={socials.facebook} target="_blank" rel="noopener noreferrer">
+//                     <FontAwesomeIcon
+//                       icon={faFacebookF}
+//                       className="text-gray-100 hover:text-primary transition duration-300"
+//                       size="lg"
+//                     />
+//                   </a>
+//                 </li>
+//               )}
+//               {socials?.instagram && (
+//                 <li>
+//                   <a href={socials.instagram} target="_blank" rel="noopener noreferrer">
+//                     <FontAwesomeIcon
+//                       icon={faInstagram}
+//                       className="text-gray-100 hover:text-primary transition duration-300"
+//                       size="lg"
+//                     />
+//                   </a>
+//                 </li>
+//               )}
+//             </ul>
+//           </div>
+//         </div>
+//       </BackgroundGradient>
+//     </div>
+//   );
+// };
+
+// export default PostBearerCard;
