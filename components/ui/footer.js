@@ -7,7 +7,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 export default function Footer()  {
   return (
-    <footer className=" bg-darkCard text-white pt-10 pb-2  ">
+    <footer className=" bg-darkCard text-white pt-10 pb-2  mt-5">
       <div className="container mx-auto pl-0 pr-0 flex-col justify-center items-center ">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start ">
           {/* Left Section: Logo and Text */}

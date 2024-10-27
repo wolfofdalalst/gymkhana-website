@@ -1,71 +1,105 @@
 "use client";
-import React from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-export default function GalleryPage() {
-  const imagePaths = Array.from({ length: 12 }, (_, i) => `/Gallery/${i + 1}.jpg`);
+const images = [
+  "/Gallery/1.jpg",
+  "/Gallery/2.jpg",
+  "/Gallery/3.jpg",
+  "/Gallery/4.jpg",
+  "/Gallery/5.jpg",
+  "/Gallery/6.jpg",
+  "/Gallery/7.jpg",
+  "/Gallery/8.jpg",
+  "/Gallery/9.jpg",
+  "/Gallery/10.jpg",
+  "/Gallery/11.jpg",
+  "/Gallery/12.jpg",
+];
+
+const captions = [
+  "NITD Gymkhana 1",
+  "NITD Gymkhana 2",
+  "NITD Gymkhana 3",
+  "NITD Gymkhana 4",
+  "NITD Gymkhana 5",
+  "NITD Gymkhana 6",
+  "NITD Gymkhana 7",
+  "NITD Gymkhana 8",
+  "NITD Gymkhana 9",
+  "NITD Gymkhana 10",
+  "NITD Gymkhana 11",
+  "NITD Gymkhana 12",
+];
+
+const Gallery = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [sliderRef, setSliderRef] = useState(null);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000
+  };
+
+  const handleThumbnailClick = (index) => {
+    setActiveIndex(index);
+    if (sliderRef) {
+      sliderRef.slickGoTo(index); // Go to the corresponding slide
+    }
+  };
 
   return (
-    <div className="min-h-screen flex flex-col items-center p-4 md:px-24 bg-black">
-      <motion.h1
-        className="text-4xl md:text-6xl font-bold text-center mb-12 text-gray-100"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        Gallery
-      </motion.h1>
+    <div className="min-h-screen flex flex-col items-center bg-black">
+      <h1 className="text-4xl font-bold text-white mb-8">Gallery</h1>
 
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
-        {imagePaths.map((imagePath, key) => (
-          <motion.div
-            key={key}
-            className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300"
-            whileHover={{
-              scale: 1.1,
-              rotate: -2,
-              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5)",
-              transition: { duration: 0.3 },
-            }}
+      {/* Slick Slider Section */}
+      <Slider {...settings} ref={setSliderRef} className="w-full max-w-4xl">
+        {images.map((src, index) => (
+          <div key={index} className="relative w-full h-80 md:h-96 overflow-hidden">
+            <Image
+              src={src}
+              alt={`Gallery Image ${index + 1}`}
+              fill
+              style={{ objectFit: 'cover' }}
+              className="rounded-lg transition-opacity duration-500 ease-in-out opacity-100"
+            />
+            <p className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-lg text-center py-2">
+              {captions[index]}
+            </p>
+          </div>
+        ))}
+      </Slider>
+
+      {/* Thumbnail Grid Section */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 w-full max-w-4xl px-4 md:px-0 mt-8">
+        {images.map((src, index) => (
+          <div
+            key={index}
+            className={`w-full h-24 md:h-32 lg:h-40 relative rounded-lg overflow-hidden shadow-md transition-transform duration-500 ease-in-out transform hover:scale-110 ${activeIndex === index ? 'border-4 border-blue-500' : ''}`}
+            onClick={() => handleThumbnailClick(index)} // Update the main image on click
+            role="button"
+            aria-label={`View image ${index + 1}`}
           >
             <Image
-              src={imagePath}
-              width={500}
-              height={500}
-              className="object-cover w-full h-full transition-transform duration-300"
-              alt={`Gallery Image ${key + 1}`}
+              src={src}
+              alt={`Thumbnail Image ${index + 1}`}
+              fill
+              style={{ objectFit: 'cover' }}
+              className={`rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110`}
             />
-
-            {/* Translucent left-to-right effect */}
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent to-black"
-              initial={{ left: "-100%" }}
-              whileHover={{ left: "100%" }}
-              transition={{ duration: 0.6 }}
-              style={{
-                position: "absolute",
-                top: 0,
-                bottom: 0,
-                left: 0,
-                right: 0,
-                background:
-                  "linear-gradient(to right, rgba(255,255,255,0.1), rgba(0,0,0,0.5))",
-              }}
-            />
-
-            {/* Border and overlay effect on hover */}
-            <motion.div
-              className="absolute inset-0 border-4 border-transparent rounded-lg transition-all duration-300"
-              whileHover={{
-                borderColor: "rgba(255, 215, 0, 1)",
-                backgroundColor: "rgba(0, 0, 0, 0.6)",
-              }}
-            />
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
   );
-}
+};
 
+export default Gallery;
