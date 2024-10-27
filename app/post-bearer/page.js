@@ -73,17 +73,18 @@ export default function PostBearer() {
     },
   ];
   return (
-    <div className="w-screen min-h-screen flex flex-col items-center justify-center">
-      <div className="h-[30vh] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md mt-7">
-        <div className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20 flex flex-col items-center justify-center">
+    <div className="w-screen min-h-screen flex flex-col items-center">
+      <div className="h-fit w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+        <div className="group h-fit md:text-7xl text-3xl lg:text-5xl font-bold text-center bg-gradient-to-r from-white to-gray-400 hover:bg-transparent hover:text-white transition-all duration-500 text-transparent bg-clip-text relative z-20 flex flex-col items-center justify-center">
           Post Bearers
+          <div className="w-0 group-hover:w-full h-[2px] bg-gradient-to-r from-blue-400 to-blue-600 transition-all duration-500"></div>
         
-          <div className="w-full h-40 relative">
+          {/* <div className="w-full h-40 relative"> */}
           {/* Gradients */}
-          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+          {/* <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
           <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
           <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" /> */}
 
           {/* Sparkles Core component */}
           {/* <SparklesCore
@@ -96,15 +97,15 @@ export default function PostBearer() {
           /> */}
 
           {/* Radial Gradient to prevent sharp edges */}
-          <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
-        </div>
+          {/* <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div> */}
+        {/* </div> */}
         </div>
       </div>
 
       <div className="w-screen h-fit flex items-center justify-center">
-        <div className="w-full h-fit mx-auto flex flex-col items-center justify-center md:grid md:grid-cols-3 md:grid-rows-2 md:gap-x-[15%] md:gap-y-[5%] md:px-10">
+        <div className="w-[285px] sm:w-[80%] md:w-[90%] lg:w-[90%] xl:w-[78%] h-fit mx-auto flex flex-col items-center justify-center sm:grid sm:grid-cols-2 sm:grid-rows-3 sm:gap-x-[20%] sm:gap-y-[2%] md:grid md:grid-cols-3 md:grid-rows-2 md:gap-x-[15%] md:gap-y-[2%]">
           {cards.map((card, index) => (
-            <div className="w-[90%] md:w-full h-[700px]" key={index}>
+            <div className="w-full h-[48vh] md:h-[400px] xl:h-[450px] flex items-center justify-center" key={index}>
               <PostBearerCard
                 src={card.src}
                 post={card.post}

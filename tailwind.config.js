@@ -88,6 +88,13 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "meteor-effect": "meteor 5s linear infinite",
       },
+      fontFamily: {
+        sans: ['Lato', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        playfair: ['"Playfair Display"', 'serif'],
+        merriweather: ['Merriweather', 'serif'],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
