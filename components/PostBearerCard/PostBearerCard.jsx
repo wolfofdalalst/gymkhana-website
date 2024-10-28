@@ -13,8 +13,8 @@ import { Meteors } from "@/components/ui/meteors";
 
 const PostBearerCard = ({ src, post, name, socials }) => {
   return (
-    <div className='static w-full h-[85%] mt-9'>
-      <BackgroundGradient containerClassName="w-full h-full" className="group rounded-[22px] w-full h-full bg-darkCard dark:bg-zinc-900 overflow-hidden hover:scale-110 transition-all duration-700 ease-in-out">
+    <div className='static w-[80%] h-[75%] mt-9'>
+      <BackgroundGradient containerClassName="w-full h-full" className="group rounded-[22px] w-full h-full bg-darkCard dark:bg-zinc-900 overflow-hidden hover:scale-105 transition-all duration-1000 ease-in-out">
         <div className='w-full h-[75%] bg-gradient-to-br from-slate-700 to-black'>
         <div className='w-[85%] h-full overflow-hidden relative m-auto'>
           <Image
@@ -28,10 +28,10 @@ const PostBearerCard = ({ src, post, name, socials }) => {
 
         <div className='w-full h-fit absolute bottom-5 z-40 transition-all duration-500 ease-in-out'>
           <div className='text-center opacity-100 group-hover:translate-y-[-100%] group-hover:opacity-0 group-hover:relative group-hover:-z-10 transition-all duration-700 ease-in-out'>
-            <div className='text-xl sm:text-base md:text-sm lg:text-xl text-primary font-bold whitespace-nowrap mb-0 md:mb-1 lg:mb-0 font-montserrat'>
+            <div className='text-base sm:text-xs md:text-[10px] lg:text-sm text-primary md:font-semibold font-bold mb-0 md:mb-1 lg:mb-0 font-montserrat'>
               {name}
             </div>
-            <div className='text-base md:text-xs lg:text-base text-white whitespace-nowrap font-sans'>
+            <div className='text-xs md:text-[10px] lg:text-xs text-white font-sans'>
               {post}
             </div>
           </div>
