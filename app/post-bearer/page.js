@@ -104,9 +104,12 @@ export default function PostBearer() {
       </div>
 
       <div className="w-screen h-fit flex flex-col items-center justify-center">
-        {/* <div className="w-[285px] sm:w-[80%] md:w-[90%] lg:w-[90%] xl:w-[78%] h-fit mx-auto flex flex-col items-center justify-center sm:grid sm:grid-cols-2 sm:grid-rows-3 sm:gap-x-[20%] sm:gap-y-[2%] md:grid md:grid-cols-3 md:grid-rows-2 md:gap-x-[15%] md:gap-y-[2%]">
+        <div className="w-[285px] sm:w-[80%] md:w-[90%] lg:w-[90%] xl:w-[78%] h-fit mx-auto flex flex-col items-center justify-center sm:grid sm:grid-cols-2 sm:grid-rows-3 sm:gap-x-[20%] sm:gap-y-[2%] md:grid md:grid-cols-3 md:grid-rows-2 md:gap-x-[15%] md:gap-y-[2%]">
           {cards.map((card, index) => (
-            <div className="w-full h-[48vh] md:h-[400px] xl:h-[450px] flex items-center justify-center" key={index}>
+            <div
+              className="w-full h-[48vh] md:h-[400px] xl:h-[450px] flex items-center justify-center"
+              key={index}
+            >
               <PostBearerCard
                 src={card.src}
                 post={card.post}
@@ -115,8 +118,8 @@ export default function PostBearer() {
               />
             </div>
           ))}
-        </div> */}
-        <div className="w-[285px] sm:w-[42%] md:w-[90%] lg:w-[90%] xl:w-[78%] h-fit mx-auto flex flex-col items-center justify-center sm:grid sm:grid-cols-1 sm:grid-rows-4 sm:gap-x-[20%] sm:gap-y-[2%] md:grid md:grid-cols-4 md:grid-rows-1 md:gap-x-[5%] md:gap-y-[2%]">
+        </div>
+        {/* <div className="w-[285px] sm:w-[42%] md:w-[90%] lg:w-[90%] xl:w-[78%] h-fit mx-auto flex flex-col items-center justify-center sm:grid sm:grid-cols-1 sm:grid-rows-4 sm:gap-x-[20%] sm:gap-y-[2%] md:grid md:grid-cols-4 md:grid-rows-1 md:gap-x-[5%] md:gap-y-[2%]">
           {order1.map((ord, index) => (
             <div
               className="w-full h-[48vh] md:h-[400px] xl:h-[450px] flex items-center justify-center"
@@ -145,7 +148,7 @@ export default function PostBearer() {
               />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

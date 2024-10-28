@@ -38,7 +38,7 @@ const PostBearerCard = ({ src, post, name, socials }) => {
 
           <div className='invisible h-0 opacity-0 translate-y-[300%] group-hover:visible group-hover:h-fit group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-in-out'>
             <ul className='flex items-center justify-evenly'>
-              <li className={`${(socials && socials.linkedin ? '' : 'hidden')} w-6 h-6`}>
+              <li className={`${(socials && socials.linkedin ? '' : 'hidden')} w-[18px] h-[18px]`}>
                 <a
                   href={(socials && socials.linkedin != undefined ? socials.linkedin : '')}
                   target="_blank"
@@ -46,7 +46,7 @@ const PostBearerCard = ({ src, post, name, socials }) => {
                   <FontAwesomeIcon icon={faLinkedin} className='text-gray-100 hover:text-primary w-full h-full transition-all duration-300' />
                 </a>
               </li>
-              <li className={`${(socials && socials.facebook ? '' : 'hidden')} w-6 h-6`}>
+              <li className={`${(socials && socials.facebook ? '' : 'hidden')} w-[18px] h-[18px]`}>
                 <a
                   href={(socials && socials.facebook != undefined ? socials.linkedin : '')}
                   target="_blank"
@@ -54,7 +54,7 @@ const PostBearerCard = ({ src, post, name, socials }) => {
                   <FontAwesomeIcon icon={faFacebookF} className="text-gray-100 hover:text-primary w-full h-full transition-all duration-300" />
                 </a>
               </li>
-              <li className={`${(socials && socials.instagram ? '' : 'hidden')} w-6 h-6`}>
+              <li className={`${(socials && socials.instagram ? '' : 'hidden')} w-[18px] h-[18px]`}>
                 <a
                   href={(socials && socials.instagram != undefined ? socials.linkedin : '')}
                   target="_blank"
