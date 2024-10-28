@@ -16,14 +16,14 @@ const PostBearerCard = ({ src, post, name, socials }) => {
     <div className='static w-[80%] h-[75%] mt-9'>
       <BackgroundGradient containerClassName="w-full h-full" className="group rounded-[22px] w-full h-full bg-darkCard dark:bg-zinc-900 overflow-hidden hover:scale-105 transition-all duration-1000 ease-in-out">
         <div className='w-full h-[75%] bg-gradient-to-br from-slate-700 to-black'>
-        <div className='w-[85%] h-full overflow-hidden relative m-auto'>
-          <Image
-            src={src}
-            alt="jordans"
-            layout='fill'
-            className="object-fill"
-          />
-        </div>
+          <div className='w-[85%] h-full overflow-hidden relative m-auto'>
+            <Image
+              src={src}
+              alt="jordans"
+              layout='fill'
+              className="object-fill"
+            />
+          </div>
         </div>
 
         <div className='w-full h-fit absolute bottom-5 z-40 transition-all duration-500 ease-in-out'>
@@ -38,30 +38,30 @@ const PostBearerCard = ({ src, post, name, socials }) => {
 
           <div className='invisible h-0 opacity-0 translate-y-[300%] group-hover:visible group-hover:h-fit group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-in-out'>
             <ul className='flex items-center justify-evenly'>
-            <li className={`${(socials && socials.linkedin?'':'hidden')} w-6 h-6`}>
-              <a
-                href={(socials && socials.linkedin!=undefined?socials.linkedin:'')}
-                target="_blank"
-              >
-                <FontAwesomeIcon icon={faLinkedin} className='text-gray-100 hover:text-primary w-full h-full transition-all duration-300'/>
-              </a>
-            </li>
-            <li className={`${(socials && socials.facebook?'':'hidden')} w-6 h-6`}>
-              <a
-                href={(socials && socials.facebook!=undefined?socials.linkedin:'')}
-                target="_blank"
-              >
-                <FontAwesomeIcon icon={faFacebookF} className="text-gray-100 hover:text-primary w-full h-full transition-all duration-300" />
-              </a>
-            </li>
-            <li className={`${(socials && socials.instagram?'':'hidden')} w-6 h-6`}>
-              <a
-                href={(socials && socials.instagram!=undefined?socials.linkedin:'')}
-                target="_blank"
-              >
-                <FontAwesomeIcon icon={faInstagram} className="text-gray-100 hover:text-primary w-full h-full transition-all duration-300"/>
-              </a>
-            </li>
+              <li className={`${(socials && socials.linkedin ? '' : 'hidden')} w-6 h-6`}>
+                <a
+                  href={(socials && socials.linkedin != undefined ? socials.linkedin : '')}
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} className='text-gray-100 hover:text-primary w-full h-full transition-all duration-300' />
+                </a>
+              </li>
+              <li className={`${(socials && socials.facebook ? '' : 'hidden')} w-6 h-6`}>
+                <a
+                  href={(socials && socials.facebook != undefined ? socials.linkedin : '')}
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faFacebookF} className="text-gray-100 hover:text-primary w-full h-full transition-all duration-300" />
+                </a>
+              </li>
+              <li className={`${(socials && socials.instagram ? '' : 'hidden')} w-6 h-6`}>
+                <a
+                  href={(socials && socials.instagram != undefined ? socials.linkedin : '')}
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faInstagram} className="text-gray-100 hover:text-primary w-full h-full transition-all duration-300" />
+                </a>
+              </li>
             </ul>
           </div>
         </div>

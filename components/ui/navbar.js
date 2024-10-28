@@ -123,7 +123,7 @@ function Navbar() {
       <div className={`absolute top-[100%] left-0 w-screen backdrop-blur-sm h-screen ${isOpen ? 'visible' : 'hidden'}`} onClick={toggleMenu}></div>
       <div
         className={`z-50 w-0 h-0 absolute md:hidden flex flex-col space-y-2 transition-all overflow-hidden ease-in-out duration-700 ${
-          isOpen ? "top-[100%] right-0 w-[50vw] h-[100vh] backdrop-blur-md bg-[rgba(0,0,0,0.6)] shadow-md shadow-blue-500" : "right-8"
+          isOpen ? "top-[100%] right-0 w-fit h-[100vh] backdrop-blur-md bg-[rgba(0,0,0,0.6)] shadow-md shadow-blue-500" : "right-8"
         }`}
       >
         <ul className="w-full h-3/4 flex flex-col gap-y-10 items-end justify-start p-7 text-xl font-normal">
