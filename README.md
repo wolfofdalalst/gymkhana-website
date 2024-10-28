@@ -39,7 +39,6 @@ Special thanks to the following contributors for their valuable contributions to
 - [Ayush Gupta](https://github.com/wolfofdalalst)
 - [Dawipayan Das](https://github.com/dawipayandas)
 - [Sachin Kumar Yadav](https://github.com/sachinky09)
-- [Sagar Das](https://github.com/sagardas25)
-- [Swaraj Jaiswal](https://github.com/swarajjaiswal)
+- [Sagar Das](https://github.com/sagardas25) 
 
 We appreciate their time and effort in making this project better.

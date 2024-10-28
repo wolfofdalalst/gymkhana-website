@@ -7,7 +7,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 export default function Footer()  {
   return (
-    <footer className=" bg-darkCard text-white pt-10 pb-2  ">
+    <footer className=" bg-darkCard text-white pt-10 pb-2  mt-5">
       <div className="container mx-auto pl-0 pr-0 flex-col justify-center items-center ">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start ">
           {/* Left Section: Logo and Text */}
@@ -27,13 +27,13 @@ export default function Footer()  {
 
             <div className="flex mt-2 w-2/6  justify-around mx-auto">
 
-              <Link href="https://www.facebook.com/gymkhana.nitdgp" target="_blank" className="hover:text-primary">
+              <Link href="https://www.facebook.com/gymkhana.nitdgp" target="_blank" className="hover:text-primary hover:scale-105 active:text-blue-800 active:scale-100 transition-all duration-300">
                 <FaFacebook className=" h-5 w-5" />
               </Link>
-              <Link href="https://www.linkedin.com/company/students-gymkhana-nit-durgapur/" target="_blank" className="hover:text-primary">
+              <Link href="https://www.linkedin.com/company/students-gymkhana-nit-durgapur/" target="_blank" className="hover:text-primary hover:scale-105 active:text-blue-800 active:scale-100 transition-all duration-300">
                 <FaLinkedin className=" h-5 w-5"/>
               </Link>
-              <Link href="https://www.instagram.com/gymkhana_nitdgp" target="_blank" className="hover:text-primary">
+              <Link href="https://www.instagram.com/gymkhana_nitdgp" target="_blank" className="hover:text-primary hover:scale-105 active:text-blue-800 active:scale-100 transition-all duration-300">
                 <FaInstagram  className="h-5 w-5"/>
               </Link>
 
@@ -55,18 +55,18 @@ export default function Footer()  {
 
               {/* Quick Links */}
               <div className=" m-1 md:mb-0 md:w-1/3 p-4  ">
-                <h4 className="font-bold text-md md:text-2xl text-center md:text-left">Quick Links</h4>
+                <h4 className="font-bold text-md md:text-2xl text-center md:text-left lg:whitespace-nowrap">Quick Links</h4>
                 <div className="grid grid-cols-1 gap-1 mt-4 text-sm md:text-lg ">
-                  <Link className="hover:text-primary"  href="/#clubs">
+                  <Link className="hover:text-primary transition-all duration-300"  href="/#clubs">
                     Clubs
                   </Link>
-                  <Link className="hover:text-primary"  href="/#events">
+                  <Link className="hover:text-primary transition-all duration-300"  href="/#events">
                     Events
                   </Link>
-                  <Link className="hover:text-primary" href="/gallery">
+                  <Link className="hover:text-primary transition-all duration-300" href="/gallery">
                     Photo Gallery
                   </Link>
-                  <Link className="hover:text-primary"  href="/post-bearer">
+                  <Link className="hover:text-primary transition-all duration-300"  href="/post-bearer">
                     Post Bearers
                   </Link>
                 </div>
@@ -78,18 +78,18 @@ export default function Footer()  {
 
               {/* Important Links */}
               <div className="md:w-1/3  m-1 p-4  ">
-                <h4 className="font-bold text-md md:text-2xl text-center md:text-left">Important Links</h4>
+                <h4 className="font-bold text-md md:text-2xl text-center md:text-left lg:whitespace-nowrap">Important Links</h4>
                 <div className="grid grid-cols-1 gap-1 mt-4 text-sm md:text-lg ">
-                  <Link href="https://nitdgp.ac.in/" target="_blank" className="hover:text-primary">
+                  <Link href="https://nitdgp.ac.in/" target="_blank" className="hover:text-primary transition-all duration-300">
                     NIT DGP Website
                   </Link>
-                  <Link href="/"  className="hover:text-primary">
+                  <Link href="/"  className="hover:text-primary transition-all duration-300">
                     Contributors
                   </Link>
-                  <Link href="https://placement.nitdgp.ac.in/"  target="_blank" className="hover:text-primary">
+                  <Link href="https://placement.nitdgp.ac.in/"  target="_blank" className="hover:text-primary transition-all duration-300">
                     Placement Portal
                   </Link>
-                  <Link href="https://www.google.com/forms/about/" target="_blank" className="hover:text-primary">
+                  <Link href="https://www.google.com/forms/about/" target="_blank" className="hover:text-primary transition-all duration-300">
                     Grievance Form
                   </Link>
                 </div>
@@ -104,9 +104,9 @@ export default function Footer()  {
             <div className="md:w-1/3 md:ml-10 p-4 mt-1  flex-col justify-center items-center  ">
               <h4 className="font-bold text-lg md:text-2xl text-center md:text-left">Contact Us</h4>
 
-              <div className="flex items-center  w-5/6 md:w-full mt-5 text-sm md:text-base mb-2 mx-auto ">
-                <FaEnvelope className="mr-2 h-4 w-4" />
-                <Link href="mailto:support@figma.com" className="hover:text-primary">
+              <div className="group flex items-center  w-5/6 md:w-full mt-5 text-sm md:text-base mb-2 mx-auto ">
+                <FaEnvelope className="mr-2 h-4 w-4 group-hover:text-primary transition-all duration-300" />
+                <Link href="mailto:support@figma.com" className="group-hover:text-primary transition-all duration-300">
                 gymkhana@nitdgp.ac.in
                 </Link>
               </div>
