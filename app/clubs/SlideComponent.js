@@ -7,12 +7,11 @@ import Image from "next/image";
 import ClubPopup from "./ClubPopup";
 import {
   FaFacebook,
-  FaAngleLeft, 
+  FaAngleLeft,
   FaAngleRight,
   FaLinkedin,
   FaInstagram,
 } from "react-icons/fa";
-
 
 import Link from "next/link";
 
@@ -207,7 +206,7 @@ const clubsData = [
   {
     id: 18,
     image: "/clubs/recursion.jpg",
-    name: "RECursion - NIT Durgapur Programming Club",
+    name: "RECursion",
     description:
       "RECursion NIT Durgapur is an initiative to embolden the budding coding minds through regular Code Classes, robust coding competitions and geeky sessions.Pioneered by a faction of enthusiasts in 2014, RECursion has continued to evolve ever since. Besides a fancy placement package, we seek to ameliorate participation in programming competitions like ACM ICPC etc. Our dynamic panel is invariably available to sort any techie doubts and cultivate positivity in you. We intend to create an intriguing ambience where coding is more of a mental sport and after every green tick, the Coder in you gets bigger and wittier. So if you have those bits hovering over your head 24*7, RECursion is your Solution!",
     instagram: "https://instagram.com/",
@@ -218,7 +217,7 @@ const clubsData = [
   {
     id: 19,
     image: "/clubs/sae.png",
-    name: "Society Of Automotive Engineers Collegiate Chapter NIT Durgapur",
+    name: "SAE Collegiate Club NIT Durgapur",
     description:
       "SAE India, the collegiate club of NIT Durgapur, established in 2007, aims to integrate the students of the college into the international fabric of automobile engineering. SAE organizes a plethora of innovative events, workshops, industrial visits, and lectures all around the year and provides a competitive space where the sharpest minds battle in a quest to achieve distinction",
     instagram: "https://instagram.com/",
@@ -246,24 +245,30 @@ const SlideComponent = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerHeight >= 950) { 
-        setHeight("45vh");
-      } else if (window.innerHeight >= 850) { 
-        setHeight("40vh");
-      } else if (window.innerHeight >= 750) {  
-        setHeight("42vh");
-      } else if (window.innerHeight >= 700) {  
-        setHeight("47vh");
-      } else if (window.innerHeight >= 650) {  
-        setHeight("40vh");
-      } else if (window.innerHeight >= 600) {  
-        setHeight("55vh");
-      } else if (window.innerHeight >= 550) { 
-        setHeight("62vh");
-      } else if (window.innerHeight >= 300) { 
-        setHeight("84vh");
-      } else {                                
-        setHeight("85vh");
+      console.log("Viewport width:", window.innerWidth); // ✅ Debug log
+
+      if (window.innerWidth >= 1400) {
+        setHeight("20vw");
+      } else if (window.innerWidth >= 1300) {
+        setHeight("23vw");
+      } else if (window.innerWidth >= 1200) {
+        setHeight("26vw");
+      } else if (window.innerWidth >= 1024) {
+        setHeight("28vw");
+      } else if (window.innerWidth >= 900) {
+        setHeight("34vw");
+      } else if (window.innerWidth >= 768) {
+        setHeight("38vw");
+      } else if (window.innerWidth >= 640) {
+        setHeight("47vw");
+      } else if (window.innerWidth >= 600) {
+        setHeight("50vw");
+      } else if (window.innerWidth >= 500) {
+        setHeight("60vw");
+      } else if (window.innerWidth >= 450) {
+        setHeight("65vw");
+      } else {
+        setHeight("80vw");
       }
     };
 
@@ -295,9 +300,8 @@ const SlideComponent = () => {
 
   return (
     <div className="relative flex flex-row items-center justify-center">
-
       <div className="button-prev bg-transparent p-2 cursor-pointer">
-        <FaAngleLeft className='h-10 w-10 hover:scale-[1.3] hover:text-blue-800 active:scale-110 active:-translate-x-2 transition-all duration-300' />
+        <FaAngleLeft className="h-10 w-10 hover:scale-[1.3] hover:text-blue-800 active:scale-110 active:-translate-x-2 transition-all duration-300" />
       </div>
 
       <Swiper
@@ -328,7 +332,7 @@ const SlideComponent = () => {
         {clubsData.map((club) => (
           <SwiperSlide key={club.id}>
             <div
-              className="min-h-full card swiper-slide bg-darkCard  rounded-lg cursor-pointer group"
+              className="card swiper-slide bg-darkCard pb-8 rounded-lg cursor-pointer group"
               onClick={() => openPopup(club)}
               role="button"
               style={{ height }}
@@ -338,7 +342,7 @@ const SlideComponent = () => {
                   <Image
                     src={club.image}
                     alt={club.name}
-                    width={250}
+                    width={230}
                     height={150}
                     className="card-img rounded-full m-auto pt-5 p-2"
                     priority
@@ -346,22 +350,23 @@ const SlideComponent = () => {
                 </div>
               </div>
 
-              <div className="card-content text-center px-2 mb-2 mt-3">
-                <Link 
+              <div className="card-content text-center mt-3">
+                <Link
                   href={club.website}
-                  target="_blank" 
-                  rel="noopener noreferrer">
-
-                <h3 className="text-center text-white hover:text-primary active:text-blue-800  font-bold text-md  transform transition-transform duration-500 ease-in-out  group-hover:-translate-y-9 group-hover:scale-90 pb-1"
-                onClick={handleLinkClick}>
-                  {club.name}
-                </h3>
-
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3
+                    className="text-center text-white hover:text-primary active:text-blue-800  font-bold text-md  transform transition-transform duration-500 ease-in-out  group-hover:-translate-y-8 group-hover:scale-90 pb-4 px-2"
+                    onClick={handleLinkClick}
+                  >
+                    {club.name}
+                  </h3>
                 </Link>
               </div>
 
               {/* Social Links Container */}
-              <div className=" absolute inset-x-0  bottom-0 transform translate-y-full transition-transform duration-300 ease-in-out group-hover:-translate-y-3  text-center p-2">
+              <div className="absolute inset-x-0  bottom-0 transform translate-y-full transition-transform duration-300 ease-in-out group-hover:-translate-y-2  text-center p-2 mt-4">
                 <Link
                   href={club.instagram}
                   target="_blank"
@@ -396,7 +401,7 @@ const SlideComponent = () => {
       </Swiper>
 
       <div className="button-next bg-transparent p-2 cursor-pointer">
-        <FaAngleRight className='h-10 w-10 hover:scale-[1.3] hover:text-blue-800 active:scale-110 active:translate-x-2 transition-all duration-300' />
+        <FaAngleRight className="h-10 w-10 hover:scale-[1.3] hover:text-blue-800 active:scale-110 active:translate-x-2 transition-all duration-300" />
       </div>
 
       {selectedClub && <ClubPopup club={selectedClub} onClose={closePopup} />}
@@ -405,4 +410,3 @@ const SlideComponent = () => {
 };
 
 export default SlideComponent;
-
