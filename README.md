@@ -4,7 +4,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+
+  First,Create HLS segments :
+
+ ```bash
+
+chmod +x generate-hls.sh   # only once to make it executable
+npm run hls                # run to generate HLS segments
+
+```
+
+
+run the development server:
 
 ```bash
 npm run dev

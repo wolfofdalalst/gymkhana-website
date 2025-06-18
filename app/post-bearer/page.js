@@ -63,7 +63,7 @@ export default function PostBearer() {
   ];
 
   return (
-    <div className="w-[98%]  mx-auto bg-zinc-900 min-h-screen py-12 px-4 rounded-lg">
+    <div className="w-[98%] mx-auto bg-zinc-900 min-h-screen py-12 px-4 rounded-lg">
       <h2 className="text-center text-3xl md:text-4xl font-bold text-white mb-10">
         Meet Our Post Bearers
       </h2>

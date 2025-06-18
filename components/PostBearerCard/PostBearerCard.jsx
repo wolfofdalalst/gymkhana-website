@@ -6,10 +6,10 @@ import Link from "next/link";
 
 export default function PostBearerCard({ name, post, src, socials }) {
   return (
-    <div className="relative group bg-zinc-800 text-white rounded-xl shadow-md p-6 w-full max-w-sm flex flex-col items-center overflow-hidden transition-all duration-700 hover:bg-zinc-700  hover:scale-95">
+    <div className="relative  group bg-zinc-800 text-white rounded-xl shadow-md p-6 w-full max-w-sm flex flex-col items-center overflow-hidden transition-all duration-700 hover:bg-zinc-700  hover:scale-95">
       {/* Image */}
       <div className="relative w-40 h-40 rounded-full overflow-hidden border-2 border-zinc-600 mb-6 transition-all duration-700 group-hover:scale-110">
-        <Image src={src} alt={name} fill  className="object-scale-down" />
+        <Image src={src} alt={name} fill className="object-scale-down" />
       </div>
 
       <div className="relative h-12 w-full flex items-center justify-center overflow-hidden">
