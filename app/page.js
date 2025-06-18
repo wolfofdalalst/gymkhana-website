@@ -12,10 +12,8 @@ import SlideComponent from "./clubs/SlideComponent";
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
 
-
   useEffect(() => {
     if (typeof window !== "undefined") {
-
       setWindowWidth(window.innerWidth);
 
       const handleResize = () => setWindowWidth(window.innerWidth);
@@ -88,4 +86,3 @@ export default function Home() {
     </div>
   );
 }
-

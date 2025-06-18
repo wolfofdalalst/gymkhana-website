@@ -328,7 +328,7 @@ const SlideComponent = () => {
         {clubsData.map((club) => (
           <SwiperSlide key={club.id}>
             <div
-              className="min-h-full card swiper-slide bg-darkCard rounded-lg cursor-pointer group"
+              className="min-h-full card swiper-slide bg-darkCard  rounded-lg cursor-pointer group"
               onClick={() => openPopup(club)}
               role="button"
               style={{ height }}
@@ -361,7 +361,7 @@ const SlideComponent = () => {
               </div>
 
               {/* Social Links Container */}
-              <div className="absolute inset-x-0  bottom-0 transform translate-y-full transition-transform duration-300 ease-in-out group-hover:-translate-y-3  text-center p-2">
+              <div className=" absolute inset-x-0  bottom-0 transform translate-y-full transition-transform duration-300 ease-in-out group-hover:-translate-y-3  text-center p-2">
                 <Link
                   href={club.instagram}
                   target="_blank"
