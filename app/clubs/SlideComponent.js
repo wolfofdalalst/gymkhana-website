@@ -1,6 +1,7 @@
+"use client";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
@@ -245,7 +246,7 @@ const SlideComponent = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      console.log("Viewport width:", window.innerWidth); // ✅ Debug log
+      console.log("Viewport width:", window.innerWidth); //  Debug log
 
       if (window.innerWidth >= 1400) {
         setHeight("20vw");
@@ -306,6 +307,11 @@ const SlideComponent = () => {
 
       <Swiper
         slidesPerView={1} // Default to 1 slide on mobile
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
         spaceBetween={30}
         loop={true}
         navigation={{
@@ -326,7 +332,7 @@ const SlideComponent = () => {
             spaceBetween: 30,
           },
         }}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         className="w-full min-h-full"
       >
         {clubsData.map((club) => (
